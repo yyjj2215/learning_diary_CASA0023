@@ -2,17 +2,11 @@
 
 This is a learning diary.
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
-
 For my lovely friends, please V50
 
 {{< video 11.mp4 >}}
 
-{{< video test.mp4 >}}
-
-{{< video welcome.mp4 >}}
-
-{{< video https://www.youtube.com/watch?v=RfjPHmgBPF0 width="400" height="300" >}}
+{{< video https://youtu.be/RfjPHmgBPF0 >}}
 
 ```{r}
 1 + 1

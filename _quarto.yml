@@ -1,0 +1,25 @@
+project:
+  type: book
+
+book:
+  title: "learning_diary_CASA0023"
+  author: "Yanbo Liu"
+  date: "2023/1/20"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - week1.qmd
+    - summary.qmd
+    - week2.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+

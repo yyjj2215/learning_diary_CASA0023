@@ -10,6 +10,8 @@ For my lovely friends, please V50
 
 {{< video test.mp4 >}}
 
+{{< video welcome.mp4 >}}
+
 ```{r}
 1 + 1
 ```

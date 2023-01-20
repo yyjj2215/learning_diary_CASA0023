@@ -12,6 +12,8 @@ For my lovely friends, please V50
 
 {{< video welcome.mp4 >}}
 
+{{< video https://www.youtube.com/watch?v=RfjPHmgBPF0 width="400" height="300" >}}
+
 ```{r}
 1 + 1
 ```

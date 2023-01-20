@@ -3,15 +3,15 @@ project:
   output-dir: docs
 
 book:
-  title: "learning_diary_CASA0023"
+  title: "learning_diary"
   author: "Yanbo Liu"
   date: "2023/1/20"
   chapters:
     - index.qmd
     - intro.qmd
     - week1.qmd
-    - summary.qmd
     - week2.qmd
+    - summary.qmd
     - references.qmd
 
 bibliography: references.bib

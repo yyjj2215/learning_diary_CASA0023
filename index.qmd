@@ -1,15 +1,25 @@
 # 祝大家新年快乐 {.unnumbered}
 
-This is a learning diary.
-
-For my lovely friends, please V50
-
 {{< video happy.mp4 >}}
 
-{{< video welcome.mp4 >}}
+兔 LUCKY!
 
-![请拿起手机扫码](money.jpg)
+金兔報喜
 
-```{r}
-1 + 1
-```
+巨款兔U
+
+財到運到福兔到
+
+福兔綿延
+
+年富一年
+
+迎春玉兔
+
+開運招福
+
+I LOVE U 兔
+
+所以我相信大家也对我有真挚的祝福，不用客气，拿起手机就好，
+
+I'm waiting for you!!!! ![请拿起手机扫码](money.jpg)

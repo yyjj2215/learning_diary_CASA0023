@@ -1,12 +1,14 @@
-# Preface {.unnumbered}
+# 祝大家新年快乐 {.unnumbered}
 
 This is a learning diary.
 
 For my lovely friends, please V50
 
-{{< video 11.mp4 >}}
+{{< video happy.mp4 >}}
 
-{{< video https://youtu.be/RfjPHmgBPF0 >}}
+{{< video welcome.mp4 >}}
+
+![请拿起手机扫码](money.jpg)
 
 ```{r}
 1 + 1

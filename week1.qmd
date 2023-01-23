@@ -1,8 +1,45 @@
----
-title: "week1"
-editor: visual
----
+# Week1 Getting started with remote sensing
 
-This part will be uploaded further.
+## Summary:
 
-Updated in 20/01/2023
+Remote sensing is the process of detecting and monitoring the physical characteristics of an area by measuring its reflected and emitted radiation at a distance (typically from satellite or aircraft). It has two types, one is active remote sensing,the other one is passive remote sensing. The difference between them is active remote sensing has a energy source.
+
+[![Differences between passive and active remote sensing](passive_and_active.png)](https://www.researchgate.net/publication/339726853_The_Mexican_Water_Forest_benefits_of_using_remote_sensing_techniques_to_assess_changes_in_land_use_and_land_cover)
+
+Electromagentic waves propagate through space and carry momentum and electromagnetic radiant energy.
+
+[![Electromagentice waves](waves.png)](https://www.britannica.com/science/electromagnetic-spectrum)
+
+Electromagentic waves has interactions with atmosphere and earth's surface.
+
++-------------+------------------------+-------------------------------------+
+|             | Atmosphere             | Earth's suface                      |
++=============+========================+=====================================+
+| Interaction | scattered by particles | -   absorbed by the surface         |
+|             |                        |                                     |
+|             |                        | -   transmitted through the surface |
++-------------+------------------------+-------------------------------------+
+
+Scattering has three types:
+
+##### Raleigh scattering(Why sky is blue? and sunset is red?)
+
+Blue light is scattered more than red light so the sky appears blue. The light has to travel further through the Earth\'s atmosphere in sunset. The blue light is scattered away, but the red light isn\'t scattered very much -- so the sky appears red.
+
+Remote sensing data has four resolutions.
+
++------------------------+---------------------------------------+--------------------------------------+
+| Resolution Types       | Description                           | Examples                             |
++========================+=======================================+======================================+
+| spatial resolution     | the size of the raster grid per pixel | 20cm or 30m                          |
++------------------------+---------------------------------------+--------------------------------------+
+| spectral resolution    | the number of bands                   | Band 2 - blue (0.45-0.51 wavelength) |
++------------------------+---------------------------------------+--------------------------------------+
+| temporal resolution    | the time it revisits                  | daily or every 7 days                |
++------------------------+---------------------------------------+--------------------------------------+
+| Radiometric resolution | the range of possible values          | 8 bit, 12 bit, or 16 bit             |
++------------------------+---------------------------------------+--------------------------------------+
+
+## Application:
+
+## Reflection:

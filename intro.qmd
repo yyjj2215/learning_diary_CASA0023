@@ -1,9 +1,6 @@
 # Introduction
 
-This is a book created from markdown and executable code.
+This is a book created for learning CASA0023 Remotely Sensing Cities and Environments, and it was written as a learning diary.
 
-See @knuth84 for additional discussion of literate programming.
+I would like to thank Dr Andrew MacLachlan for helping with this book. \
 
-```{r}
-1 + 1
-```

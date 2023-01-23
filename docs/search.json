@@ -5,5 +5,47 @@
     "title": "Happy New Year",
     "section": "",
     "text": "祝大家新年快乐\n\n兔 LUCKY!\n金兔報喜\n巨款兔U\n財到運到福兔到\n福兔綿延\n年富一年\n迎春玉兔\n開運招福\nI LOVE U 兔\n所以我相信大家对我也有真挚的祝福，不用客气，拿起手机就好，\nI’m waiting for you!!!!\n\n\n\n请拿起手机扫码"
+  },
+  {
+    "objectID": "week1.html#summary",
+    "href": "week1.html#summary",
+    "title": "2  Week1 Getting started with remote sensing",
+    "section": "2.1 Summary:",
+    "text": "2.1 Summary:\nRemote sensing is the process of detecting and monitoring the physical characteristics of an area by measuring its reflected and emitted radiation at a distance (typically from satellite or aircraft). It has two types, one is active remote sensing,the other one is passive remote sensing. The difference between them is active remote sensing has a energy source.\n\n\n\nDifferences between passive and active remote sensing\n\n\nElectromagentic waves propagate through space and carry momentum and electromagnetic radiant energy.\n\n\n\nElectromagentice waves\n\n\nElectromagentic waves has interactions with atmosphere and earth’s surface.\n\n\n\n\n\n\n\n\n\nAtmosphere\nEarth’s suface\n\n\n\n\nInteraction\nscattered by particles\n\nabsorbed by the surface\ntransmitted through the surface\n\n\n\n\nScattering has three types:\n\n2.1.0.0.1 Raleigh scattering(Why sky is blue? and sunset is red?)\nBlue light is scattered more than red light so the sky appears blue. The light has to travel further through the Earth's atmosphere in sunset. The blue light is scattered away, but the red light isn't scattered very much – so the sky appears red.\nRemote sensing data has four resolutions.\n\n\n\n\n\n\n\n\nResolution Types\nDescription\nExamples\n\n\n\n\nspatial resolution\nthe size of the raster grid per pixel\n20cm or 30m\n\n\nspectral resolution\nthe number of bands\nBand 2 - blue (0.45-0.51 wavelength)\n\n\ntemporal resolution\nthe time it revisits\ndaily or every 7 days\n\n\nRadiometric resolution\nthe range of possible values\n8 bit, 12 bit, or 16 bit"
+  },
+  {
+    "objectID": "week1.html#application",
+    "href": "week1.html#application",
+    "title": "2  Week1 Getting started with remote sensing",
+    "section": "2.2 Application:",
+    "text": "2.2 Application:"
+  },
+  {
+    "objectID": "week1.html#reflection",
+    "href": "week1.html#reflection",
+    "title": "2  Week1 Getting started with remote sensing",
+    "section": "2.3 Reflection:",
+    "text": "2.3 Reflection:"
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "This is a book created for learning CASA0023 Remotely Sensing Cities and Environments, and it was written as a learning diary.\nI would like to thank Dr Andrew MacLachlan for helping with this book."
+  },
+  {
+    "objectID": "week2.html",
+    "href": "week2.html",
+    "title": "3  Week2",
+    "section": "",
+    "text": "This is my week2 presentation. Please visit link: https://yyjj2215.github.io/week2_Xaringan/."
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "4  Summary",
+    "section": "",
+    "text": "In summary, this book"
   }
 ]

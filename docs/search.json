@@ -10,22 +10,22 @@
     "objectID": "week1.html#summary",
     "href": "week1.html#summary",
     "title": "2  Week1 Getting started with remote sensing",
-    "section": "2.1 Summary:",
-    "text": "2.1 Summary:\nRemote sensing is the process of detecting and monitoring the physical characteristics of an area by measuring its reflected and emitted radiation at a distance (typically from satellite or aircraft). It has two types, one is active remote sensing,the other one is passive remote sensing. The difference between them is active remote sensing has a energy source.\n\n\n\nDifferences between passive and active remote sensing\n\n\nElectromagentic waves propagate through space and carry momentum and electromagnetic radiant energy.\n\n\n\nElectromagentice waves\n\n\nElectromagentic waves has interactions with atmosphere and earth’s surface.\n\n\n\n\n\n\n\n\n\nAtmosphere\nEarth’s suface\n\n\n\n\nInteraction\nscattered by particles\n\nabsorbed by the surface\ntransmitted through the surface\n\n\n\n\nScattering has three types:\n\n2.1.0.0.1 Raleigh scattering(Why sky is blue? and sunset is red?)\nBlue light is scattered more than red light so the sky appears blue. The light has to travel further through the Earth's atmosphere in sunset. The blue light is scattered away, but the red light isn't scattered very much – so the sky appears red.\nRemote sensing data has four resolutions.\n\n\n\n\n\n\n\n\nResolution Types\nDescription\nExamples\n\n\n\n\nspatial resolution\nthe size of the raster grid per pixel\n20cm or 30m\n\n\nspectral resolution\nthe number of bands\nBand 2 - blue (0.45-0.51 wavelength)\n\n\ntemporal resolution\nthe time it revisits\ndaily or every 7 days\n\n\nRadiometric resolution\nthe range of possible values\n8 bit, 12 bit, or 16 bit"
+    "section": "2.1 Summary",
+    "text": "2.1 Summary\n\n2.1.1 what is remote sensing?\nRemote sensing is the process of detecting and monitoring the physical characteristics of an area by measuring its reflected and emitted radiation at a distance (typically from satellite or aircraft). It has two types, one is active remote sensing,the other one is passive remote sensing. The difference between them is active remote sensing has a energy source.\n\n\n\n[Differences between passive and active remote sensing](https://www.researchgate.net/publication/339726853_The_Mexican_Water_Forest_benefits_of_using_remote_sensing_techniques_to_assess_changes_in_land_use_and_land_cover)\n\n\n\n\n2.1.2 Electromagentic waves\npropagate through space and carry momentum and electromagnetic radiant energy.\n\n\n\n[Electromagentice waves](https://www.britannica.com/science/electromagnetic-spectrum)\n\n\n\n\n2.1.3 Interactions with atmosphere and earth’s surface\n\n\n\n\n\n\n\n\n\nAtmosphere\nEarth’s suface\n\n\n\n\nInteraction\nscattered by particles\n\nabsorbed by the surface\ntransmitted through the surface\n\n\n\n\nScattering has three types:\n\n\n\n\n\nRaleigh scattering(Why sky is blue? and sunset is red?)\nBlue light is scattered more than red light so the sky appears blue. The light has to travel further through the Earth’s atmosphere in sunset. The blue light is scattered away, but the red light isn’t scattered very much – so the sky appears red.\n\n\n2.1.4 Four resolutions of remote sensing data\n\n\n\n\n\n\n\n\nResolution Types\nDescription\nExamples\n\n\n\n\nspatial resolution\nthe size of the raster grid per pixel\n20cm or 30m\n\n\nspectral resolution\nthe number of bands\nBand 2 - blue (0.45-0.51 wavelength)\n\n\ntemporal resolution\nthe time it revisits\ndaily or every 7 days\n\n\nRadiometric resolution\nthe range of possible values\n8 bit, 12 bit, or 16 bit"
   },
   {
     "objectID": "week1.html#application",
     "href": "week1.html#application",
     "title": "2  Week1 Getting started with remote sensing",
-    "section": "2.2 Application:",
-    "text": "2.2 Application:"
+    "section": "2.2 Application",
+    "text": "2.2 Application"
   },
   {
     "objectID": "week1.html#reflection",
     "href": "week1.html#reflection",
     "title": "2  Week1 Getting started with remote sensing",
-    "section": "2.3 Reflection:",
-    "text": "2.3 Reflection:"
+    "section": "2.3 Reflection",
+    "text": "2.3 Reflection"
   },
   {
     "objectID": "intro.html",
@@ -37,7 +37,7 @@
   {
     "objectID": "week2.html",
     "href": "week2.html",
-    "title": "3  Week2",
+    "title": "3  Week2 Portfolio",
     "section": "",
     "text": "This is my week2 presentation. Please visit link: https://yyjj2215.github.io/week2_Xaringan/."
   },
@@ -47,5 +47,33 @@
     "title": "4  Summary",
     "section": "",
     "text": "In summary, this book"
+  },
+  {
+    "objectID": "week1.html#what-is-remote-sensing",
+    "href": "week1.html#what-is-remote-sensing",
+    "title": "2  Week1 Getting started with remote sensing",
+    "section": "2.2 what is remote sensing?",
+    "text": "2.2 what is remote sensing?\nRemote sensing is the process of detecting and monitoring the physical characteristics of an area by measuring its reflected and emitted radiation at a distance (typically from satellite or aircraft). It has two types, one is active remote sensing,the other one is passive remote sensing. The difference between them is active remote sensing has a energy source.\n\n\n\n[Differences between passive and active remote sensing](https://www.researchgate.net/publication/339726853_The_Mexican_Water_Forest_benefits_of_using_remote_sensing_techniques_to_assess_changes_in_land_use_and_land_cover)"
+  },
+  {
+    "objectID": "week1.html#electromagentic-waves",
+    "href": "week1.html#electromagentic-waves",
+    "title": "2  Week1 Getting started with remote sensing",
+    "section": "2.3 Electromagentic waves",
+    "text": "2.3 Electromagentic waves\npropagate through space and carry momentum and electromagnetic radiant energy.\n\n\n\n[Electromagentice waves](https://www.britannica.com/science/electromagnetic-spectrum)"
+  },
+  {
+    "objectID": "week1.html#interactions-with-atmosphere-and-earths-surface",
+    "href": "week1.html#interactions-with-atmosphere-and-earths-surface",
+    "title": "2  Week1 Getting started with remote sensing",
+    "section": "2.4 Interactions with atmosphere and earth’s surface",
+    "text": "2.4 Interactions with atmosphere and earth’s surface\n\n\n\n\n\n\n\n\n\nAtmosphere\nEarth’s suface\n\n\n\n\nInteraction\nscattered by particles\n\nabsorbed by the surface\ntransmitted through the surface\n\n\n\n\nScattering has three types:\n\n\n\n\n\nRaleigh scattering(Why sky is blue? and sunset is red?)\nBlue light is scattered more than red light so the sky appears blue. The light has to travel further through the Earth’s atmosphere in sunset. The blue light is scattered away, but the red light isn’t scattered very much – so the sky appears red."
+  },
+  {
+    "objectID": "week1.html#four-resolutions-of-remote-sensing-data",
+    "href": "week1.html#four-resolutions-of-remote-sensing-data",
+    "title": "2  Week1 Getting started with remote sensing",
+    "section": "2.5 Four resolutions of remote sensing data",
+    "text": "2.5 Four resolutions of remote sensing data\n\n\n\n\n\n\n\n\nResolution Types\nDescription\nExamples\n\n\n\n\nspatial resolution\nthe size of the raster grid per pixel\n20cm or 30m\n\n\nspectral resolution\nthe number of bands\nBand 2 - blue (0.45-0.51 wavelength)\n\n\ntemporal resolution\nthe time it revisits\ndaily or every 7 days\n\n\nRadiometric resolution\nthe range of possible values\n8 bit, 12 bit, or 16 bit"
   }
 ]

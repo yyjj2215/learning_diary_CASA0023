@@ -12,7 +12,7 @@ Remote sensing is the process of detecting and monitoring the physical character
 
 propagate through space and carry momentum and electromagnetic radiant energy.
 
-[![\[Electromagentice waves\](https://www.britannica.com/science/electromagnetic-spectrum)](waves.png)](https://www.britannica.com/science/electromagnetic-spectrum)
+[![Electromagentice waves. Source: \[Encyclopaedia Britannica\](https://www.britannica.com/science/electromagnetic-spectrum)](waves.png)](https://www.britannica.com/science/electromagnetic-spectrum)
 
 ### Interactions with atmosphere and earth's surface
 

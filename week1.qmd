@@ -6,13 +6,17 @@
 
 Remote sensing is the process of detecting and monitoring the physical characteristics of an area by measuring its reflected and emitted radiation at a distance (typically from satellite or aircraft). It has two types, one is active remote sensing,the other one is passive remote sensing. The difference between them is active remote sensing has a energy source.
 
-[![\[Differences between passive and active remote sensing\](https://www.researchgate.net/publication/339726853_The_Mexican_Water_Forest_benefits_of_using_remote_sensing_techniques_to_assess_changes_in_land_use_and_land_cover)](passive_and_active.png)](https://www.researchgate.net/publication/339726853_The_Mexican_Water_Forest_benefits_of_using_remote_sensing_techniques_to_assess_changes_in_land_use_and_land_cover)
+```{r echo=FALSE, out.width = "100%", fig.align='center', cache=FALSE, fig.cap= "Differences between passive and active remote sensing. Source: [Fernanda Lopez Ornelas](https://www.researchgate.net/publication/339726853_The_Mexican_Water_Forest_benefits_of_using_remote_sensing_techniques_to_assess_changes_in_land_use_and_land_cover)"}
+knitr::include_graphics('passive_and_active.png') 
+```
 
 ### Electromagentic waves
 
 propagate through space and carry momentum and electromagnetic radiant energy.
 
-[![Electromagentice waves. Source: \[Encyclopaedia Britannica\](https://www.britannica.com/science/electromagnetic-spectrum)](waves.png)](https://www.britannica.com/science/electromagnetic-spectrum)
+```{r echo=FALSE, out.width = "100%", fig.align='center', cache=FALSE, fig.cap= "Electromagentice waves. Source: [Encyclopaedia Britannica](https://www.britannica.com/science/electromagnetic-spectrum)"}
+knitr::include_graphics('waves.png') 
+```
 
 ### Interactions with atmosphere and earth's surface
 
@@ -26,7 +30,19 @@ propagate through space and carry momentum and electromagnetic radiant energy.
 
 Scattering has three types:
 
-[![](scattering.png)](https://physicsopenlab.org/2019/07/10/light-scattering/)
+a\) Raleigh and Mie
+
+```{r echo=FALSE, out.width = "100%", fig.align='center', cache=FALSE, fig.cap= "Source: [physicsOpenLab](https://physicsopenlab.org/2019/07/10/light-scattering/)"}
+knitr::include_graphics('scattering.png') 
+```
+
+[![](scattering.png){width="672"}](https://physicsopenlab.org/2019/07/10/light-scattering/)
+
+b\) non-selective
+
+```{r echo=FALSE, out.width = "50%", fig.align='center', cache=FALSE, fig.cap= "Source: [Natural Resources Canada](https://www.nrcan.gc.ca/maps-tools-publications/satellite-imagery-air-photos/remote-sensing-tutorials/introduction/interactions-atmosphere/14635)"}
+knitr::include_graphics('no_selective.png') 
+```
 
 ***Raleigh scattering(Why sky is blue? and sunset is red?)***
 
@@ -42,5 +58,23 @@ Blue light is scattered more than red light so the sky appears blue. The light h
 | Radiometric resolution | the range of possible values          | 8 bit, 12 bit, or 16 bit             |
 
 ## Application
+
+Color composites are an essential concept in remote sensing. True color composites sometimes refer to the color we recognize in life. For example, the tree canopy is green, and the strawberry is red. The false color composites are to display the real color in other colors. For example, the tree canopy can be displayed as red, and the strawberry can be displayed as green. The false color composites are widely applied in many remote sensing researches.
+
+One research was conducted in Afghanistan by U.S. Agency for International Development and the U.S. Trade and Development Agency, and it assessed of the natural resources of Afghanistan. The following picture is a true color composite. It's difficult to recognize some of the characteristics in this area., but the False color composite better displays individual strata, allows regional correlations of strata, and better depicts structure, such as anticlines, synclines, and faults(@philipa.2007).
+
+```{r echo=FALSE, out.width = "100%", fig.align='center', cache=FALSE, fig.cap= "Source: [Davis, P. A. 2007](https://pubs.usgs.gov/of/2007/1029/of2007-1029.pdf)"}
+knitr::include_graphics('case1.png') 
+```
+
+```{r echo=FALSE, out.width = "100%", fig.align='center', cache=FALSE, fig.cap= "Source: [Davis, P. A. 2007](https://pubs.usgs.gov/of/2007/1029/of2007-1029.pdf)"}
+knitr::include_graphics('case2.png') 
+```
+
+The color gun can produce a variety of false color composites. And the second research compares the different combinations of false colors in Pail/Padhrar Area in Punjab Province, Pakistan (@bajwa2020) The table shows the same geological formation can be displayed in various colors in different false color composites. This would be applied to many remote sensing data if we try to identify some specific features.
+
+```{r echo=FALSE, out.width = "100%", fig.align='center', cache=FALSE, fig.cap= "Source: [Bajwa et al. 2020](https://link.springer.com/article/10.1007/s12524-019-01090-7/tables/1)"}
+knitr::include_graphics('week1_case3.png') 
+```
 
 ## Reflection

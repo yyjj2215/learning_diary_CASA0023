@@ -3,12 +3,11 @@ project:
   output-dir: docs
 
 book:
-  title: "Happy New Year"
+  title: "Learning Diary for CASA0023"
   author: "Yanbo Liu"
   date: "2023/1/22"
   chapters:
     - index.qmd
-    - intro.qmd
     - week1.qmd
     - week2.qmd
     - summary.qmd

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Happy New Year - 2&nbsp; Week1 Getting started with remote sensing</title>
+<title>Learning Diary for CASA0023 - 1&nbsp; Week1 Getting started with remote sensing</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -31,7 +50,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./week2.html" rel="next">
-<link href="./intro.html" rel="prev">
+<link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -70,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week1 Getting started with remote sensing</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week1 Getting started with remote sensing</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -83,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Happy New Year</a> 
+      <a href="./">Learning Diary for CASA0023</a> 
     </div>
       </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
@@ -95,27 +114,22 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">祝大家新年快乐</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Welcome</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a>
+  <a href="./week1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week1 Getting started with remote sensing</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week1 Getting started with remote sensing</span></a>
+  <a href="./week2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week2 Portfolio</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week2 Portfolio</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -132,15 +146,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">2.1</span>  Summary</a>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">1.1</span>  Summary</a>
   <ul class="collapse">
-  <li><a href="#what-is-remote-sensing" id="toc-what-is-remote-sensing" class="nav-link" data-scroll-target="#what-is-remote-sensing"><span class="toc-section-number">2.1.1</span>  what is remote sensing?</a></li>
-  <li><a href="#electromagentic-waves" id="toc-electromagentic-waves" class="nav-link" data-scroll-target="#electromagentic-waves"><span class="toc-section-number">2.1.2</span>  Electromagentic waves</a></li>
-  <li><a href="#interactions-with-atmosphere-and-earths-surface" id="toc-interactions-with-atmosphere-and-earths-surface" class="nav-link" data-scroll-target="#interactions-with-atmosphere-and-earths-surface"><span class="toc-section-number">2.1.3</span>  Interactions with atmosphere and earth’s surface</a></li>
-  <li><a href="#four-resolutions-of-remote-sensing-data" id="toc-four-resolutions-of-remote-sensing-data" class="nav-link" data-scroll-target="#four-resolutions-of-remote-sensing-data"><span class="toc-section-number">2.1.4</span>  Four resolutions of remote sensing data</a></li>
+  <li><a href="#what-is-remote-sensing" id="toc-what-is-remote-sensing" class="nav-link" data-scroll-target="#what-is-remote-sensing"><span class="toc-section-number">1.1.1</span>  what is remote sensing?</a></li>
+  <li><a href="#electromagentic-waves" id="toc-electromagentic-waves" class="nav-link" data-scroll-target="#electromagentic-waves"><span class="toc-section-number">1.1.2</span>  Electromagentic waves</a></li>
+  <li><a href="#interactions-with-atmosphere-and-earths-surface" id="toc-interactions-with-atmosphere-and-earths-surface" class="nav-link" data-scroll-target="#interactions-with-atmosphere-and-earths-surface"><span class="toc-section-number">1.1.3</span>  Interactions with atmosphere and earth’s surface</a></li>
+  <li><a href="#four-resolutions-of-remote-sensing-data" id="toc-four-resolutions-of-remote-sensing-data" class="nav-link" data-scroll-target="#four-resolutions-of-remote-sensing-data"><span class="toc-section-number">1.1.4</span>  Four resolutions of remote sensing data</a></li>
   </ul></li>
-  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">2.2</span>  Application</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">2.3</span>  Reflection</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">1.2</span>  Application</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">1.3</span>  Reflection</a></li>
   </ul>
 </nav>
     </div>
@@ -149,7 +163,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week1 Getting started with remote sensing</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week1 Getting started with remote sensing</span></h1>
 </div>
 
 
@@ -164,30 +178,38 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="summary" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">2.1</span> Summary</h2>
-<section id="what-is-remote-sensing" class="level3" data-number="2.1.1">
-<h3 data-number="2.1.1" class="anchored" data-anchor-id="what-is-remote-sensing"><span class="header-section-number">2.1.1</span> what is remote sensing?</h3>
+<section id="summary" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">1.1</span> Summary</h2>
+<section id="what-is-remote-sensing" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="what-is-remote-sensing"><span class="header-section-number">1.1.1</span> what is remote sensing?</h3>
 <p>Remote sensing is the process of detecting and monitoring the physical characteristics of an area by measuring its reflected and emitted radiation at a distance (typically from satellite or aircraft). It has two types, one is active remote sensing,the other one is passive remote sensing. The difference between them is active remote sensing has a energy source.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://www.researchgate.net/publication/339726853_The_Mexican_Water_Forest_benefits_of_using_remote_sensing_techniques_to_assess_changes_in_land_use_and_land_cover"><img src="passive_and_active.png" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">[Differences between passive and active remote sensing](https://www.researchgate.net/publication/339726853_The_Mexican_Water_Forest_benefits_of_using_remote_sensing_techniques_to_assess_changes_in_land_use_and_land_cover)</figcaption><p></p>
+<p><img src="passive_and_active.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Differences between passive and active remote sensing. Source: <a href="https://www.researchgate.net/publication/339726853_The_Mexican_Water_Forest_benefits_of_using_remote_sensing_techniques_to_assess_changes_in_land_use_and_land_cover">Fernanda Lopez Ornelas</a></figcaption><p></p>
 </figure>
 </div>
+</div>
+</div>
 </section>
-<section id="electromagentic-waves" class="level3" data-number="2.1.2">
-<h3 data-number="2.1.2" class="anchored" data-anchor-id="electromagentic-waves"><span class="header-section-number">2.1.2</span> Electromagentic waves</h3>
+<section id="electromagentic-waves" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="electromagentic-waves"><span class="header-section-number">1.1.2</span> Electromagentic waves</h3>
 <p>propagate through space and carry momentum and electromagnetic radiant energy.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://www.britannica.com/science/electromagnetic-spectrum"><img src="waves.png" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Electromagentice waves. Source: [Encyclopaedia Britannica](https://www.britannica.com/science/electromagnetic-spectrum)</figcaption><p></p>
+<p><img src="waves.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Electromagentice waves. Source: <a href="https://www.britannica.com/science/electromagnetic-spectrum">Encyclopaedia Britannica</a></figcaption><p></p>
 </figure>
 </div>
+</div>
+</div>
 </section>
-<section id="interactions-with-atmosphere-and-earths-surface" class="level3" data-number="2.1.3">
-<h3 data-number="2.1.3" class="anchored" data-anchor-id="interactions-with-atmosphere-and-earths-surface"><span class="header-section-number">2.1.3</span> Interactions with atmosphere and earth’s surface</h3>
+<section id="interactions-with-atmosphere-and-earths-surface" class="level3" data-number="1.1.3">
+<h3 data-number="1.1.3" class="anchored" data-anchor-id="interactions-with-atmosphere-and-earths-surface"><span class="header-section-number">1.1.3</span> Interactions with atmosphere and earth’s surface</h3>
 <table class="table">
 <colgroup>
 <col style="width: 17%">
@@ -213,16 +235,38 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 <p>Scattering has three types:</p>
+<p>a) Raleigh and Mie</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://physicsopenlab.org/2019/07/10/light-scattering/"><img src="scattering.png" class="img-fluid figure-img"></a></p>
+<p><img src="scattering.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://physicsopenlab.org/2019/07/10/light-scattering/">physicsOpenLab</a></figcaption><p></p>
 </figure>
+</div>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://physicsopenlab.org/2019/07/10/light-scattering/"><img src="scattering.png" class="img-fluid figure-img" width="672"></a></p>
+</figure>
+</div>
+<p>b) non-selective</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="no_selective.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://www.nrcan.gc.ca/maps-tools-publications/satellite-imagery-air-photos/remote-sensing-tutorials/introduction/interactions-atmosphere/14635">Natural Resources Canada</a></figcaption><p></p>
+</figure>
+</div>
+</div>
 </div>
 <p><strong><em>Raleigh scattering(Why sky is blue? and sunset is red?)</em></strong></p>
 <p>Blue light is scattered more than red light so the sky appears blue. The light has to travel further through the Earth’s atmosphere in sunset. The blue light is scattered away, but the red light isn’t scattered very much – so the sky appears red.</p>
 </section>
-<section id="four-resolutions-of-remote-sensing-data" class="level3" data-number="2.1.4">
-<h3 data-number="2.1.4" class="anchored" data-anchor-id="four-resolutions-of-remote-sensing-data"><span class="header-section-number">2.1.4</span> Four resolutions of remote sensing data</h3>
+<section id="four-resolutions-of-remote-sensing-data" class="level3" data-number="1.1.4">
+<h3 data-number="1.1.4" class="anchored" data-anchor-id="four-resolutions-of-remote-sensing-data"><span class="header-section-number">1.1.4</span> Four resolutions of remote sensing data</h3>
 <table class="table">
 <colgroup>
 <col style="width: 23%">
@@ -261,13 +305,54 @@ ul.task-list li input[type="checkbox"] {
 </table>
 </section>
 </section>
-<section id="application" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="application"><span class="header-section-number">2.2</span> Application</h2>
+<section id="application" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="application"><span class="header-section-number">1.2</span> Application</h2>
+<p>Color composites are an essential concept in remote sensing. True color composites sometimes refer to the color we recognize in life. For example, the tree canopy is green, and the strawberry is red. The false color composites are to display the real color in other colors. For example, the tree canopy can be displayed as red, and the strawberry can be displayed as green. The false color composites are widely applied in many remote sensing researches.</p>
+<p>One research was conducted in Afghanistan by U.S. Agency for International Development and the U.S. Trade and Development Agency, and it assessed of the natural resources of Afghanistan. The following picture is a true color composite. It’s difficult to recognize some of the characteristics in this area., but the False color composite better displays individual strata, allows regional correlations of strata, and better depicts structure, such as anticlines, synclines, and faults(<span class="citation" data-cites="philipa.2007">Philip A. (<a href="references.html#ref-philipa.2007" role="doc-biblioref">2007</a>)</span>).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="case1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://pubs.usgs.gov/of/2007/1029/of2007-1029.pdf">Davis, P. A. 2007</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="case2.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://pubs.usgs.gov/of/2007/1029/of2007-1029.pdf">Davis, P. A. 2007</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The color gun can produce a variety of false color composites. And the second research compares the different combinations of false colors in Pail/Padhrar Area in Punjab Province, Pakistan (<span class="citation" data-cites="bajwa2020">Bajwa, Ahsan, and Ahmad (<a href="references.html#ref-bajwa2020" role="doc-biblioref">2020</a>)</span>) The table shows the same geological formation can be displayed in various colors in different false color composites. This would be applied to many remote sensing data if we try to identify some specific features.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week1_case3.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://link.springer.com/article/10.1007/s12524-019-01090-7/tables/1">Bajwa et al.&nbsp;2020</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
-<section id="reflection" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">2.3</span> Reflection</h2>
+<section id="reflection" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">1.3</span> Reflection</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-bajwa2020" class="csl-entry" role="doc-biblioentry">
+Bajwa, Rizwan Saqib, Naveed Ahsan, and Sajid Rashid Ahmad. 2020. <span>“A Review of Landsat False Color Composite Images for Lithological Mapping of Pre-Cambrian to Recent Rocks: A Case Study of Pail/Padhrar Area in Punjab Province, Pakistan.”</span> <em>Journal of the Indian Society of Remote Sensing</em> 48 (5): 721–28. <a href="https://doi.org/10.1007/s12524-019-01090-7">https://doi.org/10.1007/s12524-019-01090-7</a>.
+</div>
+<div id="ref-philipa.2007" class="csl-entry" role="doc-biblioentry">
+Philip A., Davis. 2007. <span>“Landsat ETM+ False-Color Image Mosaics of Afghanistan.”</span>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -406,13 +491,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./intro.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span>
+      <a href="./index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Welcome</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./week2.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week2 Portfolio</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week2 Portfolio</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

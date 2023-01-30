@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Learning Diary for CASA0023 - 3&nbsp; Week3 Remote sensing data</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./summary.html" rel="next">
+<link href="./week2.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week3 Remote sensing data</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Learning Diary for CASA0023</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Welcome</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week1 Getting started with remote sensing</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week2 Portfolio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week3.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week3 Remote sensing data</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">3.1</span>  Summary</a>
+  <ul class="collapse">
+  <li><a href="#how-landsat-obtain-image-data-by-using-scanners" id="toc-how-landsat-obtain-image-data-by-using-scanners" class="nav-link" data-scroll-target="#how-landsat-obtain-image-data-by-using-scanners"><span class="toc-section-number">3.1.1</span>  How Landsat obtain image data by using scanners?</a></li>
+  <li><a href="#why-remote-sensing-data-need-to-be-processed" id="toc-why-remote-sensing-data-need-to-be-processed" class="nav-link" data-scroll-target="#why-remote-sensing-data-need-to-be-processed"><span class="toc-section-number">3.1.2</span>  Why remote sensing data need to be processed?</a></li>
+  <li><a href="#corrections-of-image-data" id="toc-corrections-of-image-data" class="nav-link" data-scroll-target="#corrections-of-image-data"><span class="toc-section-number">3.1.3</span>  Corrections of image data</a></li>
+  <li><a href="#mosaicking-and-image-enhancement" id="toc-mosaicking-and-image-enhancement" class="nav-link" data-scroll-target="#mosaicking-and-image-enhancement"><span class="toc-section-number">3.1.4</span>  Mosaicking and Image enhancement</a></li>
+  </ul></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">3.2</span>  Application</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">3.3</span>  Reflection</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week3 Remote sensing data</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="summary" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">3.1</span> Summary</h2>
+<section id="how-landsat-obtain-image-data-by-using-scanners" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="how-landsat-obtain-image-data-by-using-scanners"><span class="header-section-number">3.1.1</span> How Landsat obtain image data by using scanners?</h3>
+<p>The remote sensing data are collected by multispectral scanners, and they can detect different electromagnetic bands of radiation. These data are digitally processed and transmitted to ground station.</p>
+<p><strong>Two main ways of scanning and acquire image data:</strong></p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Whiskbroom</th>
+<th>Pushbroom</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Across-track scanning</td>
+<td>Along-track scanning</td>
+</tr>
+<tr class="even">
+<td>Wide swath width</td>
+<td>Narrow swath width</td>
+</tr>
+<tr class="odd">
+<td>Simple optical system</td>
+<td>Complex optical system</td>
+</tr>
+<tr class="even">
+<td>Shorter dwell time</td>
+<td>Longer dwell time</td>
+</tr>
+<tr class="odd">
+<td>Pixel distortion</td>
+<td>No pixel distortion</td>
+</tr>
+<tr class="even">
+<td>Example: Landsat 7</td>
+<td>Example: Landsat 8</td>
+</tr>
+</tbody>
+</table>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="week3_data/whiskbroom.gif" class="img-fluid figure-img" style="width:50.0%"></p>
+<p></p><figcaption class="figure-caption">Whishbroom. Source: <a href="https://en.wikipedia.org/wiki/Whisk_broom_scanner">wikipedia</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="week3_data/pushbroom.gif" class="img-fluid figure-img" style="width:50.0%"></p>
+<p></p><figcaption class="figure-caption">Pushbroom. Source: <a href="https://en.wikipedia.org/wiki/Push_broom_scanner">wikipedia</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="why-remote-sensing-data-need-to-be-processed" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="why-remote-sensing-data-need-to-be-processed"><span class="header-section-number">3.1.2</span> Why remote sensing data need to be processed?</h3>
+<p>This may cause by some noise that are produced by sensors, the atmosphere, the terrain, and so on. For example, the atmosphere causes some noise in collecting data, like atmospheric pollution, floating particles. These noise can be removed by using some correction measures.</p>
+</section>
+<section id="corrections-of-image-data" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="corrections-of-image-data"><span class="header-section-number">3.1.3</span> Corrections of image data</h3>
+<section id="geometric-correction" class="level4" data-number="3.1.3.1">
+<h4 data-number="3.1.3.1" class="anchored" data-anchor-id="geometric-correction"><span class="header-section-number">3.1.3.1</span> Geometric correction</h4>
+<p>When collecting image data, there are some geometric errors. These images can be adjusted by using scale, orientation, and projection, which can match the spatial characteristics of earth surface.</p>
+<p><strong>Reasons for image distortions</strong></p>
+<ul>
+<li><p>View angle</p></li>
+<li><p>Topography (like hills or not flat ground)</p></li>
+<li><p>Wind (Using plane to collect data)</p></li>
+<li><p>Rotation of the earth (Using satellite to collect data)</p></li>
+</ul>
+<p><strong>Solutions for geometric correction</strong></p>
+<ol type="1">
+<li><p>identify ground control points</p></li>
+<li><p>build models to provide geometric transformation coefficients</p></li>
+<li><p>transform coordinates of pixels locations</p></li>
+</ol>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week3_data/gc3.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<p></p><figcaption class="figure-caption">Coordinates transformation. Source: <a href="http://wiki.awf.forst.uni-goettingen.de/wiki/index.php/Geometric_corrections">wikipedia</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="4" type="1">
+<li>resample pixels values</li>
+</ol>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week3_data/gc4.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Resample pixels. Source:<a href="https://www.semanticscholar.org/paper/Comparison-of-Image-Resampling-Techniques-for-Studley/fa316fc18b22fe466f818bcea0edae76d08c91f9">Studley 2011</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Example for correct a old map in GIS</strong></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week3_data/GCP.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Geometric correction for old map. Source: Yanbo</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="atmospheric-correction" class="level4" data-number="3.1.3.2">
+<h4 data-number="3.1.3.2" class="anchored" data-anchor-id="atmospheric-correction"><span class="header-section-number">3.1.3.2</span> Atmospheric correction</h4>
+<p>Earth’s atmosphere has water vapor and ozone and other gases, and they will have effects on the measuring process. These effects can be removed when using remote sensing data, which is atmospheric correction.</p>
+<p><strong>Necessary and unnecessary atmospheric correction :</strong></p>
+<table class="table">
+<colgroup>
+<col style="width: 45%">
+<col style="width: 54%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Unnecessary</th>
+<th>Necessary</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Classification of a single image</td>
+<td>Biophysical parameters needed (e.g.&nbsp;temperature, leaf area index, NDVI)</td>
+</tr>
+<tr class="even">
+<td>Independent classification of multi date imagery</td>
+<td>Using spectral signatures through time and space</td>
+</tr>
+<tr class="odd">
+<td>Composite images (combining images)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Single dates or where training data extracted from all data</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Source: <a href="https://andrewmaclachlan.github.io/CASA0023-lecture-3/?panelset3=dn2&amp;panelset4=ratio2&amp;panelset5=pca2#26">CASA0023 slides P26</a></p>
+<p><strong>Types of atmospheric correction:</strong></p>
+<p><em>Relative</em></p>
+<p>normalize intensities of different bands within a single image and bands from many dates to one date</p>
+<p><em>Absolute</em></p>
+<p>use atmospheric conditions and illumination at the time of image collection, which to estimate the amount of scattering and absorption in images. Then, change digital brightness values into scaled surface reflectance. This can be done through atmospheric radiative transfer models.</p>
+<div class="quarto-video ratio ratio-21x9"><iframe src="https://www.youtube.com/embed/qb4yFwzsnU8?start=1" title="atmospheric correction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="orthorectification-correction" class="level4" data-number="3.1.3.3">
+<h4 data-number="3.1.3.3" class="anchored" data-anchor-id="orthorectification-correction"><span class="header-section-number">3.1.3.3</span> Orthorectification correction</h4>
+<p>The topography of earth has variation, like hills, ridges, canyon and so on. Also, the satellite will have tilt when they collect data. Both of them have effects on the images. Basically, various topographical features and angles of satellite causes more inherent distortion in remote sensing data.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week3_data/oc1.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://www.satimagingcorp.com/services/orthorectification/">Satellite Imaging Corporation</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This is a example of orthorectification, and the left picture shows crooked road, but the right picture shows the real straight road after orthorectification.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week3_data/oc3.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Example of before orthorectification and after Source: <a href="https://trac.osgeo.org/ossim/wiki/orthorectification">OSSIM</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="radiometric-calibration" class="level4" data-number="3.1.3.4">
+<h4 data-number="3.1.3.4" class="anchored" data-anchor-id="radiometric-calibration"><span class="header-section-number">3.1.3.4</span> Radiometric Calibration</h4>
+<p>Although many imagery data has already been converted to radiance by data provider, the process of radiometric calibration should be noticed. It refers to conversion of digital number(DN) to spectral radiance. DN is values in every pixels, and they are observed and measured by sensors. The spectral radiance is the amount of energy per unit area, like the amount of light from sensor in the field of view. There are many factors that affects radiance. For example, the intensity of illumination, the direction of illumination, orientation, position of target feature, and so on.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week3_data/rc1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Factors that affect radiance Source: <a href="https://www.materials-talks.com/the-importance-of-calibrating-your-remote-sensing-imagery/">Susan 2020</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="mosaicking-and-image-enhancement" class="level3" data-number="3.1.4">
+<h3 data-number="3.1.4" class="anchored" data-anchor-id="mosaicking-and-image-enhancement"><span class="header-section-number">3.1.4</span> Mosaicking and Image enhancement</h3>
+<p><strong>Mosaicking</strong></p>
+<p>It is similar to merge function in QGIS. For instance, some image data can be merged together based on the characteristics of each image, finally produces a new image.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week3_data/join.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Mosaicking Source: <a href="https://desktop.arcgis.com/en/arcmap/10.3/manage-data/raster-and-images/what-is-a-mosaic.htm">ArcGis</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Image enhancement</strong></p>
+<p>In order to better visualize characteristics on images, image can be enhanced by using many different methods, like stretch and spatial filtering. The following picture shows contrast is enhanced, and the visual interpretation can be easier.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week3_data/enhance.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Linear contrast stretch Source: <a href="https://www.nrcan.gc.ca/maps-tools-and-publications/satellite-imagery-and-air-photos/tutorial-fundamentals-remote-sensing/image-interpretation-analysis/image-enhancement/9389">CCRS</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="application" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="application"><span class="header-section-number">3.2</span> Application</h2>
+<p><strong>Explorations of radiometric calibration methods in UAS data</strong></p>
+<p>There are many methods for radiometric calibration. Generally, when you have some remote sensing data, image producers will have some recommended methods, but there are also some empirical methods. One research had compared five common methods by using unmanned aircraft systems data, which tries to explore the best performance of radiometric calibration. The five methods are one-point calibration (method A), one-point calibration plus sunshine sensor (method B), pre-calibration using the simplified empirical line calibration (method C) , one-point calibration plus sunshine sensor plus post-calibration(method D), and post-calibration using the simplified empirical line calibration (method E). The paper found there are no method that can have the best performance in every band <span class="citation" data-cites="poncet2019">Poncet et al. (<a href="references.html#ref-poncet2019" role="doc-biblioref">2019a</a>)</span>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week3_data/a1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">RMSE values in all methods Source: <a href="https://www.mdpi.com/2072-4292/11/16/1917">Aurelie et al.&nbsp;2019</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week3_data/a2.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">The distributions of RMSE values in each band Source: <a href="https://www.mdpi.com/2072-4292/11/16/1917">Aurelie et al.&nbsp;2019</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The RMSE values are various in different bands, and they should be always noticed. For example, method B has lower RMSE in red-edge and NIR, but higher in green band. So we need to select the suitable method for radiometric calibration depending on our objectives <span class="citation" data-cites="poncet2019a">Poncet et al. (<a href="references.html#ref-poncet2019a" role="doc-biblioref">2019b</a>)</span>. The analysis of imagery data can be more careful because the radiometric calibration method may have influence on the interpretation of UAS imagery.</p>
+<p><strong>Effects of Atmospheric Corrections on NDVI</strong></p>
+<p>Vegetation measurement is an essential application in remote sensing, and NDVI is Normalized Difference Vegetation Index (NDVI), which can quantify vegetation health. For example, when NDVI values are close to +1, the vegetation should be dense green, and when NDVI values are close to 0, there are no green. The NDVI formula is following:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week3_data/a4.png" class="img-fluid figure-img" style="width:30.0%"></p>
+<p></p><figcaption class="figure-caption">NDVI formula: <a href="https://gisgeography.com/ndvi-normalized-difference-vegetation-index/">GISGeography</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="week3_data/a3.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
+<p></p><figcaption class="figure-caption">NDVI values Source: <a href="https://gisgeography.com/ndvi-normalized-difference-vegetation-index/">GISGeography</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>One study explored common methods (QUAC, FLAASH, DOS, ACOLITE, 6S, and Sen2Cor) for atmospheric Corrections on NDVI by using Landsat 8, Sentinel-2, and UAV sensors data. In real raster data analysis, data probably are from different source, so the atmospheric correction, to some extent, make them more comparable. In this paper, FLAASH method has the best distinctiveness on NDVI between Landsat 8 and Sentinel-2. <span class="citation" data-cites="moravec2021">Moravec et al. (<a href="references.html#ref-moravec2021" role="doc-biblioref">2021</a>)</span>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week3_data/a5.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<p></p><figcaption class="figure-caption">Median values of non-corrected TOA and corrected BOA Source: <a href="https://www.mdpi.com/2072-4292/13/18/3550">David 2021</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="reflection" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">3.3</span> Reflection</h2>
+<p><strong>Image enhancement</strong></p>
+<p>In the week 1, the false color composites can enhance the characteristics of image, and I think image enhancement also plays a similar role in visualizing image. In QGIS, there are many options for contrast enhancement, and I can set the min/max value for raster data.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week3_data/r3.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<p></p><figcaption class="figure-caption">Contrast enhancement Source: Yanbo</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week3_data/r2.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">No enhancement vs contrast enhancement Source: Yanbo</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>In the enhancement image, I can more easily distinguish the boundary of grass and forest, so enhancement is really useful for real analysis in my study.</p>
+<p><strong>Mosaicking</strong></p>
+<p>This is similar to the merge function in QGIS, and merge is essential function. If my study area is not fully recorded by one raster data, I have to mosaic several raster data together in order to get my study area.</p>
+<p><strong>Principal Component Analysis</strong></p>
+<p>I think PCA would be a powerful tool in the future study. This contributes to reduce the dimensionality of data. In real remote sensing data analysis, I think the data probably have multiple dimensions, and the PCA would be functional to reduce them, which help us identify which components are more important among the data. For example, I can use PCA in exploring vegetation patterns, which tries to find what vegetation type dominate in study area.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-moravec2021" class="csl-entry" role="doc-biblioentry">
+Moravec, David, Jan Komárek, Serafín López-Cuervo Medina, and Iñigo Molina. 2021. <span>“Effect of Atmospheric Corrections on NDVI: Intercomparability of Landsat 8, Sentinel-2, and UAV Sensors.”</span> <em>Remote Sensing</em> 13 (18): 3550. <a href="https://doi.org/10.3390/rs13183550">https://doi.org/10.3390/rs13183550</a>.
+</div>
+<div id="ref-poncet2019" class="csl-entry" role="doc-biblioentry">
+Poncet, Aurelie M., Thorsten Knappenberger, Christian Brodbeck, Michael Fogle, Joey N. Shaw, and Brenda V. Ortiz. 2019a. <span>“Multispectral UAS Data Accuracy for Different Radiometric Calibration Methods.”</span> <em>Remote Sensing</em> 11 (16): 1917. <a href="https://doi.org/10.3390/rs11161917">https://doi.org/10.3390/rs11161917</a>.
+</div>
+<div id="ref-poncet2019a" class="csl-entry" role="doc-biblioentry">
+———. 2019b. <span>“Multispectral UAS Data Accuracy for Different Radiometric Calibration Methods.”</span> <em>Remote Sensing</em> 11 (16): 1917. <a href="https://doi.org/10.3390/rs11161917">https://doi.org/10.3390/rs11161917</a>.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./week2.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week2 Portfolio</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./summary.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -129,7 +129,12 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  <a href="./week3.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week3 Remote sensing data</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -152,6 +157,8 @@ div.csl-indent {
   <li><a href="#electromagentic-waves" id="toc-electromagentic-waves" class="nav-link" data-scroll-target="#electromagentic-waves"><span class="toc-section-number">1.1.2</span>  Electromagentic waves</a></li>
   <li><a href="#interactions-with-atmosphere-and-earths-surface" id="toc-interactions-with-atmosphere-and-earths-surface" class="nav-link" data-scroll-target="#interactions-with-atmosphere-and-earths-surface"><span class="toc-section-number">1.1.3</span>  Interactions with atmosphere and earth’s surface</a></li>
   <li><a href="#four-resolutions-of-remote-sensing-data" id="toc-four-resolutions-of-remote-sensing-data" class="nav-link" data-scroll-target="#four-resolutions-of-remote-sensing-data"><span class="toc-section-number">1.1.4</span>  Four resolutions of remote sensing data</a></li>
+  <li><a href="#raster-data-acquisition" id="toc-raster-data-acquisition" class="nav-link" data-scroll-target="#raster-data-acquisition"><span class="toc-section-number">1.1.5</span>  Raster data acquisition</a></li>
+  <li><a href="#analysis-tool" id="toc-analysis-tool" class="nav-link" data-scroll-target="#analysis-tool"><span class="toc-section-number">1.1.6</span>  Analysis tool</a></li>
   </ul></li>
   <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">1.2</span>  Application</a></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">1.3</span>  Reflection</a></li>
@@ -187,7 +194,7 @@ div.csl-indent {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="passive_and_active.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="week1_data/passive_and_active.png" class="img-fluid figure-img" style="width:100.0%"></p>
 <p></p><figcaption class="figure-caption">Differences between passive and active remote sensing. Source: <a href="https://www.researchgate.net/publication/339726853_The_Mexican_Water_Forest_benefits_of_using_remote_sensing_techniques_to_assess_changes_in_land_use_and_land_cover">Fernanda Lopez Ornelas</a></figcaption><p></p>
 </figure>
 </div>
@@ -201,7 +208,7 @@ div.csl-indent {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="waves.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="week1_data/waves.png" class="img-fluid figure-img" style="width:100.0%"></p>
 <p></p><figcaption class="figure-caption">Electromagentice waves. Source: <a href="https://www.britannica.com/science/electromagnetic-spectrum">Encyclopaedia Britannica</a></figcaption><p></p>
 </figure>
 </div>
@@ -240,23 +247,18 @@ div.csl-indent {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="scattering.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="week1_data/scattering.png" class="img-fluid figure-img" style="width:100.0%"></p>
 <p></p><figcaption class="figure-caption">Source: <a href="https://physicsopenlab.org/2019/07/10/light-scattering/">physicsOpenLab</a></figcaption><p></p>
 </figure>
 </div>
 </div>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://physicsopenlab.org/2019/07/10/light-scattering/"><img src="scattering.png" class="img-fluid figure-img" width="672"></a></p>
-</figure>
 </div>
 <p>b) non-selective</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="no_selective.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="week1_data/no_selective.png" class="img-fluid figure-img" style="width:50.0%"></p>
 <p></p><figcaption class="figure-caption">Source: <a href="https://www.nrcan.gc.ca/maps-tools-publications/satellite-imagery-air-photos/remote-sensing-tutorials/introduction/interactions-atmosphere/14635">Natural Resources Canada</a></figcaption><p></p>
 </figure>
 </div>
@@ -304,16 +306,39 @@ div.csl-indent {
 </tbody>
 </table>
 </section>
+<section id="raster-data-acquisition" class="level3" data-number="1.1.5">
+<h3 data-number="1.1.5" class="anchored" data-anchor-id="raster-data-acquisition"><span class="header-section-number">1.1.5</span> Raster data acquisition</h3>
+<p>There are many sources that provide raster data, for example, raster data can be produced by aerial photography and satellites. The common satellites data can be downloaded in two websites:</p>
+<p><strong>Sentinel data</strong></p>
+<p>The data is provided by the Copernicus Space Component Data Access (CSCDA), which is operating by the European Space Agency. The data has <strong>high level information, free, full, and open</strong> for all international users.</p>
+<p>Data download link: <a href="https://scihub.copernicus.eu/dhus/#/home" class="uri">https://scihub.copernicus.eu/dhus/#/home</a></p>
+<p><strong>Landsat data</strong> All Landsat data are provided by the U.S. Geological Survey, and it’s also free. It has the longest free temporal data, which is useful for doing raster data analysis in temporal aspects.</p>
+<p>Data download link: <a href="https://earthexplorer.usgs.gov/" class="uri">https://earthexplorer.usgs.gov/</a></p>
 </section>
-<section id="application" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="application"><span class="header-section-number">1.2</span> Application</h2>
-<p>Color composites are an essential concept in remote sensing. True color composites sometimes refer to the color we recognize in life. For example, the tree canopy is green, and the strawberry is red. The false color composites are to display the real color in other colors. For example, the tree canopy can be displayed as red, and the strawberry can be displayed as green. The false color composites are widely applied in many remote sensing researches.</p>
-<p>One research was conducted in Afghanistan by U.S. Agency for International Development and the U.S. Trade and Development Agency, and it assessed of the natural resources of Afghanistan. The following picture is a true color composite. It’s difficult to recognize some of the characteristics in this area., but the False color composite better displays individual strata, allows regional correlations of strata, and better depicts structure, such as anticlines, synclines, and faults(<span class="citation" data-cites="philipa.2007">Philip A. (<a href="references.html#ref-philipa.2007" role="doc-biblioref">2007</a>)</span>).</p>
+<section id="analysis-tool" class="level3" data-number="1.1.6">
+<h3 data-number="1.1.6" class="anchored" data-anchor-id="analysis-tool"><span class="header-section-number">1.1.6</span> Analysis tool</h3>
+<p>SNAP (Sentinels Application Platform) is a raster data analysis tool, and it is designed for Sentinels data. It also can manipulate Landsat data, so it has strong analysis functions. For example, resampling data, reporjecting, masking, and so on.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="case1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="week1_data/week1_snap.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">SNAP layout Source: Yanbo 2023</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="application" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="application"><span class="header-section-number">1.2</span> Application</h2>
+<p>Color composites are an essential concept in remote sensing. True color composites sometimes refer to the color we recognize in life. For example, the tree canopy is green, and the strawberry is red. The false color composites are to display the real color in other colors. For example, the tree canopy can be displayed as red, and the strawberry can be displayed as green. The false color composites are widely applied in many remote sensing researches.</p>
+<p>One research was conducted in Afghanistan by U.S. Agency for International Development and the U.S. Trade and Development Agency, and it assessed the natural resources of Afghanistan. The following picture is a true color composite. It’s difficult to recognize some of the characteristics in this area., but the False color composite better displays individual strata, allows regional correlations of strata, and better depicts structure, such as anticlines, synclines, and faults(<span class="citation" data-cites="philipa.2007">Philip A. (<a href="references.html#ref-philipa.2007" role="doc-biblioref">2007</a>)</span>).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week1_data/case1.png" class="img-fluid figure-img" style="width:100.0%"></p>
 <p></p><figcaption class="figure-caption">Source: <a href="https://pubs.usgs.gov/of/2007/1029/of2007-1029.pdf">Davis, P. A. 2007</a></figcaption><p></p>
 </figure>
 </div>
@@ -323,7 +348,7 @@ div.csl-indent {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="case2.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="week1_data/case2.png" class="img-fluid figure-img" style="width:100.0%"></p>
 <p></p><figcaption class="figure-caption">Source: <a href="https://pubs.usgs.gov/of/2007/1029/of2007-1029.pdf">Davis, P. A. 2007</a></figcaption><p></p>
 </figure>
 </div>
@@ -334,7 +359,7 @@ div.csl-indent {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="week1_case3.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="week1_data/week1_case3.png" class="img-fluid figure-img" style="width:100.0%"></p>
 <p></p><figcaption class="figure-caption">Source: <a href="https://link.springer.com/article/10.1007/s12524-019-01090-7/tables/1">Bajwa et al.&nbsp;2020</a></figcaption><p></p>
 </figure>
 </div>
@@ -343,6 +368,33 @@ div.csl-indent {
 </section>
 <section id="reflection" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">1.3</span> Reflection</h2>
+<p><strong>Raster data acquisition</strong></p>
+<p>The two main raster data acquisition ways are useful for future research, and I can find all raster data all over the world from Sentinel and Landsat. This actually inspires me that I can applied raster data in my final work of GEOG0114 course last term. My original topic is to explore how the thermal inequality affect people’s health in Chicago, but I don’t know where to download raster data and how to manipulate it. Then, I just gave up this topic and selected a new topic, which was doing criminology research. However, I think I’m currently able to analysis raster data in my study by using SNAP, QGIS, and R.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week1_data/r1.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Resample and mask for Sentinel and Landsat data of Cape Town in south Africa Source: Yanbo</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Spectral signature</strong></p>
+<p>I think this content will be useful for me to better understand the applications of remote sensing data. Spectral signature is the variations of reflectance and absorption for different materials in various wavelengths.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="week1_data/r2.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Typical spectral signatures of specic land cover type Source: <a href="https://www.researchgate.net/publication/326405082_Remote_Sensing_Techniques_for_Change_Detection_Analysis_in_Arid_and_Semi-arid_areas/figures?lo=1">Anna 2017</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The above figure provides a very good example for explanation. I can easily identify different material based on their characteristics of reflectance. For example, when the wavelengths greater than 700nm, the reflectance of green vegetation increases from 10% to 50%, this is also called red edge. This is really essential for identify green vegetation in real application and distinguish different vegetation type because the amount of Chlorophyll are various in different species. In addition, I also can use spectral signature to identify different type of materials, like explore where is the urban area, agriculture, bare land, and so on.</p>
+<p><strong>Color composites</strong></p>
+<p>This concept is very interesting because I think many people have cognition that tree leaves are green, and flower is colorful. Also, in our phone, they are also displayed as the same color that we recognize in life. If they are displayed into different colors, it comes very interesting things. For example, I can use false color composites to create image has purple or pink leaves if I want. In addition, false composites are essential for remote sensing data because they can show more characteristics in the image compared to true color composites. This has been discussed in the application part, and I think I also can apply false color composites in my future study.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">

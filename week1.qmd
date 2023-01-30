@@ -7,7 +7,7 @@
 Remote sensing is the process of detecting and monitoring the physical characteristics of an area by measuring its reflected and emitted radiation at a distance (typically from satellite or aircraft). It has two types, one is active remote sensing,the other one is passive remote sensing. The difference between them is active remote sensing has a energy source.
 
 ```{r echo=FALSE, out.width = "100%", fig.align='center', cache=FALSE, fig.cap= "Differences between passive and active remote sensing. Source: [Fernanda Lopez Ornelas](https://www.researchgate.net/publication/339726853_The_Mexican_Water_Forest_benefits_of_using_remote_sensing_techniques_to_assess_changes_in_land_use_and_land_cover)"}
-knitr::include_graphics('passive_and_active.png') 
+knitr::include_graphics('week1_data/passive_and_active.png') 
 ```
 
 ### Electromagentic waves
@@ -15,7 +15,7 @@ knitr::include_graphics('passive_and_active.png')
 propagate through space and carry momentum and electromagnetic radiant energy.
 
 ```{r echo=FALSE, out.width = "100%", fig.align='center', cache=FALSE, fig.cap= "Electromagentice waves. Source: [Encyclopaedia Britannica](https://www.britannica.com/science/electromagnetic-spectrum)"}
-knitr::include_graphics('waves.png') 
+knitr::include_graphics('week1_data/waves.png') 
 ```
 
 ### Interactions with atmosphere and earth's surface
@@ -33,15 +33,13 @@ Scattering has three types:
 a\) Raleigh and Mie
 
 ```{r echo=FALSE, out.width = "100%", fig.align='center', cache=FALSE, fig.cap= "Source: [physicsOpenLab](https://physicsopenlab.org/2019/07/10/light-scattering/)"}
-knitr::include_graphics('scattering.png') 
+knitr::include_graphics('week1_data/scattering.png') 
 ```
-
-[![](scattering.png){width="672"}](https://physicsopenlab.org/2019/07/10/light-scattering/)
 
 b\) non-selective
 
 ```{r echo=FALSE, out.width = "50%", fig.align='center', cache=FALSE, fig.cap= "Source: [Natural Resources Canada](https://www.nrcan.gc.ca/maps-tools-publications/satellite-imagery-air-photos/remote-sensing-tutorials/introduction/interactions-atmosphere/14635)"}
-knitr::include_graphics('no_selective.png') 
+knitr::include_graphics('week1_data/no_selective.png') 
 ```
 
 ***Raleigh scattering(Why sky is blue? and sunset is red?)***
@@ -57,24 +55,68 @@ Blue light is scattered more than red light so the sky appears blue. The light h
 | temporal resolution    | the time it revisits                  | daily or every 7 days                |
 | Radiometric resolution | the range of possible values          | 8 bit, 12 bit, or 16 bit             |
 
+### Raster data acquisition
+
+There are many sources that provide raster data, for example, raster data can be produced by aerial photography and satellites. The common satellites data can be downloaded in two websites:
+
+**Sentinel data**
+
+The data is provided by the Copernicus Space Component Data Access (CSCDA), which is operating by the European Space Agency. The data has **high level information, free, full, and open** for all international users.
+
+Data download link: <https://scihub.copernicus.eu/dhus/#/home>
+
+**Landsat data** All Landsat data are provided by the U.S. Geological Survey, and it's also free. It has the longest free temporal data, which is useful for doing raster data analysis in temporal aspects.
+
+Data download link: <https://earthexplorer.usgs.gov/>
+
+### Analysis tool
+
+SNAP (Sentinels Application Platform) is a raster data analysis tool, and it is designed for Sentinels data. It also can manipulate Landsat data, so it has strong analysis functions. For example, resampling data, reporjecting, masking, and so on.
+
+```{r echo=FALSE, out.width = "80%", fig.align='center', cache=FALSE, fig.cap= "SNAP layout Source: Yanbo 2023"}
+knitr::include_graphics('week1_data/week1_snap.png') 
+```
+
 ## Application
 
 Color composites are an essential concept in remote sensing. True color composites sometimes refer to the color we recognize in life. For example, the tree canopy is green, and the strawberry is red. The false color composites are to display the real color in other colors. For example, the tree canopy can be displayed as red, and the strawberry can be displayed as green. The false color composites are widely applied in many remote sensing researches.
 
-One research was conducted in Afghanistan by U.S. Agency for International Development and the U.S. Trade and Development Agency, and it assessed of the natural resources of Afghanistan. The following picture is a true color composite. It's difficult to recognize some of the characteristics in this area., but the False color composite better displays individual strata, allows regional correlations of strata, and better depicts structure, such as anticlines, synclines, and faults(@philipa.2007).
+One research was conducted in Afghanistan by U.S. Agency for International Development and the U.S. Trade and Development Agency, and it assessed the natural resources of Afghanistan. The following picture is a true color composite. It's difficult to recognize some of the characteristics in this area., but the False color composite better displays individual strata, allows regional correlations of strata, and better depicts structure, such as anticlines, synclines, and faults(@philipa.2007).
 
 ```{r echo=FALSE, out.width = "100%", fig.align='center', cache=FALSE, fig.cap= "Source: [Davis, P. A. 2007](https://pubs.usgs.gov/of/2007/1029/of2007-1029.pdf)"}
-knitr::include_graphics('case1.png') 
+knitr::include_graphics('week1_data/case1.png') 
 ```
 
 ```{r echo=FALSE, out.width = "100%", fig.align='center', cache=FALSE, fig.cap= "Source: [Davis, P. A. 2007](https://pubs.usgs.gov/of/2007/1029/of2007-1029.pdf)"}
-knitr::include_graphics('case2.png') 
+knitr::include_graphics('week1_data/case2.png') 
 ```
 
 The color gun can produce a variety of false color composites. And the second research compares the different combinations of false colors in Pail/Padhrar Area in Punjab Province, Pakistan (@bajwa2020) The table shows the same geological formation can be displayed in various colors in different false color composites. This would be applied to many remote sensing data if we try to identify some specific features.
 
 ```{r echo=FALSE, out.width = "100%", fig.align='center', cache=FALSE, fig.cap= "Source: [Bajwa et al. 2020](https://link.springer.com/article/10.1007/s12524-019-01090-7/tables/1)"}
-knitr::include_graphics('week1_case3.png') 
+knitr::include_graphics('week1_data/week1_case3.png') 
 ```
 
 ## Reflection
+
+**Raster data acquisition**
+
+The two main raster data acquisition ways are useful for future research, and I can find all raster data all over the world from Sentinel and Landsat. This actually inspires me that I can applied raster data in my final work of GEOG0114 course last term. My original topic is to explore how the thermal inequality affect people's health in Chicago, but I don't know where to download raster data and how to manipulate it. Then, I just gave up this topic and selected a new topic, which was doing criminology research. However, I think I'm currently able to analysis raster data in my study by using SNAP, QGIS, and R.
+
+```{r echo=FALSE, out.width = "80%", fig.align='center', cache=FALSE, fig.cap= "Resample and mask for Sentinel and Landsat data of Cape Town in south Africa Source: Yanbo"}
+knitr::include_graphics('week1_data/r1.png') 
+```
+
+**Spectral signature**
+
+I think this content will be useful for me to better understand the applications of remote sensing data. Spectral signature is the variations of reflectance and absorption for different materials in various wavelengths.
+
+```{r echo=FALSE, out.width = "100%", fig.align='center', cache=FALSE, fig.cap= "Typical spectral signatures of specic land cover type Source: [Anna 2017](https://www.researchgate.net/publication/326405082_Remote_Sensing_Techniques_for_Change_Detection_Analysis_in_Arid_and_Semi-arid_areas/figures?lo=1)"}
+knitr::include_graphics('week1_data/r2.jpg') 
+```
+
+The above figure provides a very good example for explanation. I can easily identify different material based on their characteristics of reflectance. For example, when the wavelengths greater than 700nm, the reflectance of green vegetation increases from 10% to 50%, this is also called red edge. This is really essential for identify green vegetation in real application and distinguish different vegetation type because the amount of Chlorophyll are various in different species. In addition, I also can use spectral signature to identify different type of materials, like explore where is the urban area, agriculture, bare land, and so on.
+
+**Color composites**
+
+This concept is very interesting because I think many people have cognition that tree leaves are green, and flower is colorful. Also, in our phone, they are also displayed as the same color that we recognize in life. If they are displayed into different colors, it comes very interesting things. For example, I can use false color composites to create image has purple or pink leaves if I want. In addition, false composites are essential for remote sensing data because they can show more characteristics in the image compared to true color composites. This has been discussed in the application part, and I think I also can apply false color composites in my future study.

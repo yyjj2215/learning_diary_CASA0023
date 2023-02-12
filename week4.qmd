@@ -1,7 +1,3 @@
----
-bibliography: references.bib
----
-
 # Week4 Policy
 
 ## Summary

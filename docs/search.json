@@ -44,7 +44,7 @@
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "4  Summary",
+    "title": "10  Summary",
     "section": "",
     "text": "In summary, this book"
   },
@@ -152,5 +152,89 @@
     "title": "5  Week5 Google Earth Engine",
     "section": "5.3 Reflection",
     "text": "5.3 Reflection"
+  },
+  {
+    "objectID": "week6.html#summary",
+    "href": "week6.html#summary",
+    "title": "6  Week6 Classification I",
+    "section": "6.1 Summary",
+    "text": "6.1 Summary"
+  },
+  {
+    "objectID": "week6.html#application",
+    "href": "week6.html#application",
+    "title": "6  Week6 Classification I",
+    "section": "6.2 Application",
+    "text": "6.2 Application"
+  },
+  {
+    "objectID": "week6.html#reflection",
+    "href": "week6.html#reflection",
+    "title": "6  Week6 Classification I",
+    "section": "6.3 Reflection",
+    "text": "6.3 Reflection"
+  },
+  {
+    "objectID": "week7.html#summary",
+    "href": "week7.html#summary",
+    "title": "7  Week7 Classification II",
+    "section": "7.1 Summary",
+    "text": "7.1 Summary"
+  },
+  {
+    "objectID": "week7.html#application",
+    "href": "week7.html#application",
+    "title": "7  Week7 Classification II",
+    "section": "7.2 Application",
+    "text": "7.2 Application"
+  },
+  {
+    "objectID": "week7.html#reflection",
+    "href": "week7.html#reflection",
+    "title": "7  Week7 Classification II",
+    "section": "7.3 Reflection",
+    "text": "7.3 Reflection"
+  },
+  {
+    "objectID": "week8.html#summary",
+    "href": "week8.html#summary",
+    "title": "8  Week8 Temperature",
+    "section": "8.1 Summary",
+    "text": "8.1 Summary"
+  },
+  {
+    "objectID": "week8.html#application",
+    "href": "week8.html#application",
+    "title": "8  Week8 Temperature",
+    "section": "8.2 Application",
+    "text": "8.2 Application"
+  },
+  {
+    "objectID": "week8.html#reflection",
+    "href": "week8.html#reflection",
+    "title": "8  Week8 Temperature",
+    "section": "8.3 Reflection",
+    "text": "8.3 Reflection"
+  },
+  {
+    "objectID": "week9.html#summary",
+    "href": "week9.html#summary",
+    "title": "9  Week9 SAR",
+    "section": "9.1 Summary",
+    "text": "9.1 Summary"
+  },
+  {
+    "objectID": "week9.html#application",
+    "href": "week9.html#application",
+    "title": "9  Week9 SAR",
+    "section": "9.2 Application",
+    "text": "9.2 Application"
+  },
+  {
+    "objectID": "week9.html#reflection",
+    "href": "week9.html#reflection",
+    "title": "9  Week9 SAR",
+    "section": "9.3 Reflection",
+    "text": "9.3 Reflection"
   }
 ]

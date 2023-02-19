@@ -1,6 +1,403 @@
-# Week5 Google Earth Engine
+# Week5 An introduction to Google Earth Engine
 
 ## Summary
+
+### What is Google Earth Engine?
+
+Google Earth Engine is a cloud platform developed by Google, and it can process satellite imagery from Landsat and other geospatial data uploaded by users.
+
+[User guide](https://developers.google.com/earth-engine/guides)
+
+### Mind map
+
+```{r echo=FALSE, out.width = "80%", fig.align='left', cache=FALSE, fig.cap= "Mind map. Source:Yanbo"}
+knitr::include_graphics('week5_data/summary.png') 
+```
+
+### Key concepts about GEE
+
+**GEE terms**
+
+|   GEE   |     R      |
+|:-------:|:----------:|
+|  image  |   raster   |
+| feature |   vector   |
+|  stack  | collection |
+
+**Javascript**
+
+GEE use javascript (web programming language) to manipulate data.
+
+-   var define objects
+
+-   // add comments
+
+``` javascript
+// key codes in GEE
+
+var number = 1 
+
+var string = 'Hello, World!'
+
+var list = [1.23, 8, -3]
+print(list[2])
+
+var dictionary = {
+  a: 'Hello',
+  b: 10,
+  c: 0.1343,
+  d: list
+}
+
+print(dictionary.b)
+print(number, string, list, dictionary)
+```
+
+**Client and server**
+
+| client                    | server                            |
+|---------------------------|-----------------------------------|
+| web page on the browser   | all data are stored on the server |
+| code shows on the browser | codes runs on the server          |
+
+**Loop and map**
+
+-   don't use loop on the server
+
+-   use mapping functions(only loading image collection once, and get results)
+
+-   code examples
+
+    *Loop*
+
+    ``` python
+    list = [1,2,3]
+
+    bias = 1
+
+    x = 0
+
+    for x < list.length:
+      list[x]=list[x]+bias
+
+    list= [2,3,4]
+    ```
+
+    *Map*
+
+    ``` python
+    list.map(list=list+1)
+
+    list =[2,3,4]
+    ```
+
+**Scale**
+
+-   refers to pixel resolution
+
+-   output are aggregated (256\*256 grid)
+
+-   always need to set a scale, if not, the pixel values may change
+
+```{r echo=FALSE, out.width = "80%", fig.align='left', cache=FALSE, fig.cap= "Scale. Source: [Google Developers](https://developers.google.com/earth-engine/guides/scale)"}
+knitr::include_graphics('week5_data/scale.png') 
+```
+
+**Projection**
+
+displays all data into Mercator projection (EPSG: 3857)
+
+### How to use GEE?
+
+**Objects and method overview**
+
+```{r echo=FALSE, out.width = "1000%", fig.align='left', cache=FALSE, fig.cap= "Common Earth Engine object classes. Source: [Google Earth Engine](https://developers.google.com/earth-engine/guides/objects_methods_overview)"}
+knitr::include_graphics('week5_data/objects.png') 
+```
+
+**Code editor**
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Code editor. Source: [Google Earth Engine](https://www.un.org/sustainabledevelopment/cities/)"}
+knitr::include_graphics('week5_data/GEE.png') 
+```
+
+**Load image collection**
+
+use `ee.ImageCollection()` to load, `filterDate()` and `filterBounds()` to select specific date and locations, otherwise, GEE will have errors because too many elements.
+
+``` {.javascript .Javascript}
+var oneimage = ee.ImageCollection('LANDSAT/LC09/C02/T1_L2')
+  .filterDate('2022-01-03', '2022-04-04')
+  .filterBounds(Dheli);  // Intersecting ROI
+Map.addLayer(oneimage, {bands: ["SR_B4", "SR_B3", "SR_B2"]})
+```
+
+**Load feature collection**
+
+features refers to the geometries with attributes, use `ee.FeatureCollection()` to load, `filter()` to select specific area, like R
+
+``` javascript
+var india = ee.FeatureCollection('users/jesse/china');
+print(china, "china");
+Map.addLayer(china, {}, "china");
+```
+
+``` javascript
+var india = ee.FeatureCollection('users/jesse/china')
+    .filter('GID_1 == "CHN.25_1"');
+```
+
+**Reducing images**
+
+When I only want to classify one image from a massive image collections, use this method. The process of this is to take all median of all images to make a image composite, then summarized into one single image. This process ignored some extreme values, but they may be useful.
+
+`collection.reduce()` client side
+
+`ee.Reducer()` server side
+
+``` javascript
+// Compute the median in each band, each pixel.
+// Band names are B1_median, B2_median, etc.
+var median = collection.reduce(ee.Reducer.median());
+```
+
+*by region*
+
+`reduceRegion()` reduce region a single region
+
+by region(s)
+
+`reduceRegions()` reduce region in many small areas
+
+*by neighborhood*
+
+`reduceNeighborhood()` reduce by image neighborhood (surrounded pixels)
+
+**Linear regression**
+
+`linearFit()` Look change over time. For example, the change of temperature over last decades
+
+-   dependent variables, like temperature
+
+-   independent varibles, often time
+
+**Multiple Linear Regression**
+
+constant band are required, and need to mentioned the number of X and Y
+
+``` javascript
+.map(createConstantBand)
+```
+
+``` javascript
+var linearRegression = collection.reduce(
+  ee.Reducer.linearRegression({
+    numX: 2,
+    numY: 2
+}));
+```
+
+**Join**
+
+`join.apply()` similar to joins in R
+
+Example: add all plants within 100km buffer of the National park
+
+code link: <https://code.earthengine.google.com/7424ebd78cf7d634f161a0a0619019ea> (Source: Andrew Maclachlan)
+
+### Common examples of GEE Analysis
+
+my code link: <https://code.earthengine.google.com/a0d4d4aa44552e6a529e39a1d6a3f572>
+
+**Clip Images**
+
+use polygon to clip study area
+
+``` javascript
+var clip = meanImage.clip(india)
+  .select(['SR_B1', 'SR_B2', 'SR_B3', 'SR_B4', 'SR_B5', 'SR_B6', 'SR_B7']);
+
+var vis_params3 = {
+  bands: ['SR_B4', 'SR_B3', 'SR_B2'],
+  min: 0,
+  max: 0.3,
+};
+
+// map the layer
+Map.addLayer(clip, vis_params3, 'clip');
+```
+
+```{r echo=FALSE, out.width = "50%", fig.align='left', cache=FALSE, fig.cap= "Clip output. Source: Yanbo"}
+knitr::include_graphics('week5_data/Dheli.png') 
+```
+
+**Texture measures**
+
+help users to extract useful information by applying some mathematical formulas on pixels values. So it can improve the accuracy of image classification and enhance the interpretation of remote sensing data.
+
+-   use `glcmTexture()` in GEE
+
+-   size means the number of neighborhoods, 1 means a 3\*3 grid
+
+``` javascript
+var glcm = clip.select(['SR_B1', 'SR_B2', 'SR_B3', 'SR_B4', 'SR_B5', 'SR_B6', 'SR_B7'])
+  .multiply(1000)
+  .toUint16()
+  .glcmTexture({size: 1})
+  .select('SR_.._contrast|SR_.._diss')
+  .addBands(clip);
+  
+// add to the map, but change the range values  
+Map.addLayer(glcm, {min:14, max: 650}, 'glcm');
+```
+
+```{r echo=FALSE, out.width = "50%", fig.align='left', cache=FALSE, fig.cap= "Texture measures output. Source: Yanbo"}
+knitr::include_graphics('week5_data/glcm.png') 
+```
+
+**PCA**
+
+``` javascript
+// scale and band names
+
+var scale = 30;
+var bandNames = glcm.bandNames();
+print('GLCM band names:', glcm.bandNames());
+
+var region = india.geometry();
+Map.centerObject(region, 10);
+Map.addLayer(ee.Image().paint(region, 0, 2), {}, 'Region');
+
+print(region, "india_geometry");
+
+// mean center the data and SD strech the princapal components 
+// and an SD stretch of the principal components.
+print('bandNames:', bandNames);
+var meanDict = glcm.reduceRegion({
+    reducer: ee.Reducer.mean(),
+    geometry: region,
+    scale: scale,
+    maxPixels: 1e9
+});
+print('Mean Dictionary:', meanDict);
+var means = ee.Image.constant(meanDict.values(bandNames));
+print("Means: ", means);
+var centered = glcm.subtract(means);
+
+// This helper function returns a list of new band names.
+var getNewBandNames = function(prefix) {
+  var seq = ee.List.sequence(1, bandNames.length());
+  return seq.map(function(b) {
+    return ee.String(prefix).cat(ee.Number(b).int());
+  });
+};
+
+
+// This function accepts mean centered imagery, a scale and
+// a region in which to perform the analysis.  It returns the
+// Principal Components (PC) in the region as a new image.
+var getPrincipalComponents = function(centered, scale, region) {
+  // Collapse the bands of the image into a 1D array per pixel.
+  var arrays = centered.toArray();
+
+  // Compute the covariance of the bands within the region.
+  var covar = arrays.reduceRegion({
+    reducer: ee.Reducer.centeredCovariance(),
+    geometry: region,
+    scale: scale,
+    maxPixels: 1e9
+  });
+
+  // Get the 'array' covariance result and cast to an array.
+  // This represents the band-to-band covariance within the region.
+  var covarArray = ee.Array(covar.get('array'));
+
+  // Perform an eigen analysis and slice apart the values and vectors.
+  var eigens = covarArray.eigen();
+
+  // This is a P-length vector of Eigenvalues.
+  var eigenValues = eigens.slice(1, 0, 1);
+  // This is a PxP matrix with eigenvectors in rows.
+  
+  var eigenValuesList = eigenValues.toList().flatten();
+  var total = eigenValuesList.reduce(ee.Reducer.sum());
+  var percentageVariance = eigenValuesList.map(function(item) {
+  return (ee.Number(item).divide(total)).multiply(100).format('%.2f')});
+  
+  print("percentageVariance", percentageVariance);
+
+  var eigenVectors = eigens.slice(1, 1);
+
+  // Convert the array image to 2D arrays for matrix computations.
+  var arrayImage = arrays.toArray(1);
+
+  // Left multiply the image array by the matrix of eigenvectors.
+  var principalComponents = ee.Image(eigenVectors).matrixMultiply(arrayImage);
+
+  // Turn the square roots of the Eigenvalues into a P-band image.
+  var sdImage = ee.Image(eigenValues.sqrt())
+    .arrayProject([0]).arrayFlatten([getNewBandNames('sd')]);
+
+  // Turn the PCs into a P-band image, normalized by SD.
+  return principalComponents
+    // Throw out an an unneeded dimension, [[]] -> [].
+    .arrayProject([0])
+    // Make the one band array image a multi-band image, [] -> image.
+    .arrayFlatten([getNewBandNames('pc')])
+    // Normalize the PCs by their SDs.
+    .divide(sdImage);
+};
+
+// Get the PCs at the specified scale and in the specified region
+var pcImage = getPrincipalComponents(centered, scale, region);
+
+
+Map.addLayer(pcImage, {bands: ['pc2', 'pc1'], min: -2, max: 2}, 'PCA bands 1 and 2');
+```
+
+p1 and p2 has the highest percentage, and they are the most important components. Here, extract pc1 and pc2.
+
+```{r echo=FALSE, out.width = "50%", fig.align='left', cache=FALSE, fig.cap= "PCA percentage list. Source: Yanbo"}
+knitr::include_graphics('week5_data/pc_list.png') 
+```
+
+```{r echo=FALSE, out.width = "50%", fig.align='left', cache=FALSE, fig.cap= "PCA output. Source: Yanbo"}
+knitr::include_graphics('week5_data/pc1.png') 
+```
+
+**NDVI**
+
+important index that helps vegetation analysis in many cases.
+
+``` javascript
+// common methods
+var NDVI_1 = clip.select('SR_B5').subtract(clip.select('SR_B4'))
+  .divide(clip.select('SR_5').add(clip.select('SR_B4')));
+// GEE functions
+var NDVI_2 = clip.normalizedDifference([SR_B5, SR_B4]);
+Map.addLayer(NDVI_1, { min: -1, max: 1, palette: ['blue', 'white', 'green']}, 'NDVI');
+```
+
+```{r echo=FALSE, out.width = "50%", fig.align='left', cache=FALSE, fig.cap= "NDVI output. Source: Yanbo"}
+knitr::include_graphics('week5_data/NDVI.png') 
+```
+
+**Export layers**
+
+use `Export.image.toDrive()`
+
+``` javascript
+// Export the image, specifying the CRS, transform, and region.
+Export.image.toDrive({
+  image: PCA_out,
+  description: 'PCA_india',
+  scale:30,
+  crs: projection.crs,
+  maxPixels: 100E10,
+  region: bounds
+
+});
+```
 
 ## Application
 

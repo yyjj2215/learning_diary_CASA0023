@@ -4,6 +4,19 @@ project:
 
 book:
   title: "Learning Diary for CASA0023"
+  navbar:
+    logo: ucl.jpg
+    collapse: true
+    collapse-below: lg
+    background: info
+    search: true
+    right:
+      - icon: github
+  sidebar:
+    style: floating
+    reader-mode: true
+  repo-url: https://github.com/yyjj2215/learning_diary_CASA0023
+  repo-actions: [edit, issue]
   author: "Yanbo Liu"
   date: "2023/1/22"
   chapters:
@@ -16,7 +29,6 @@ book:
     - week6.qmd
     - week7.qmd
     - week8.qmd
-    - week9.qmd
     - summary.qmd
     - references.qmd
 

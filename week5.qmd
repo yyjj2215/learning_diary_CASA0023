@@ -401,4 +401,62 @@ Export.image.toDrive({
 
 ## Application
 
+Google earth engine is a powerful tool with many advantages in remote sensing analysis. It does not require users to download large satellite images, and users can access a large range of Landsat images stored on the server. It also has a strong computing platform, and users can do analysis on the server rather than running analysis on personal computers. In this application, I tried to explore some papers, and find the procedure of remote sensing analysis in Google Earth Engine.
+
+### **Case 1: Detecting land cover change in Singapore**
+
+The first paper was conducted by @sidhu2018, and they explored the land cover change by using GEE in Singapore. Also, they examined the ability of GEE, and they found GEE has three strengths. The first one is the ease of functionality, and they can easily upload other data by using Asset Manager. Then, GEE has efficient processing capabilities, and this makes it easy to run spatial reductions. Finally, the computational powers are strong, and the computational times are within a matter of time. Moreover, they found the activity of dredging increased from 2006 to 2010 in Singapore (@sidhu2018b).
+
+*Method*
+
+The framework of the method they used clearly shows the analysis procedures of doing remote sensing research in GEE. In the data preparation, they uploaded some imagery and filtered imagery on GEE. Then, they used the polygon of the study area to clip the imagery. Finally, they created a function for collection reductions.
+
+```{r echo=FALSE, out.width = "80%", fig.align='left', cache=FALSE, fig.cap= "Methodological framework. Source: [Sidhu, Pebesma, and Câmara, 2018](https://www.tandfonline.com/doi/full/10.1080/22797254.2018.1451782)"}
+knitr::include_graphics('week5_data/a1.png') 
+```
+
+This framework of method focuses on the analysis of remote sensing data at the temporal level. The main function applied here is reducer in GEE. However, GEE also can do analysis like PCA, and texture measure. This requires a different framework of the method.
+
+*Output*
+
+```{r echo=FALSE, out.width = "80%", fig.align='left', cache=FALSE, fig.cap= "Land cover change (2006, 2008, 2010). Source: [Sidhu, Pebesma, and Câmara, 2018](https://www.tandfonline.com/doi/full/10.1080/22797254.2018.1451782)"}
+knitr::include_graphics('week5_data/a2.png') 
+```
+
+### **Case2: Land Surface Temperature Estimation in central Portugal**
+
+The second paper applied GEE to estimate land surface temperature(LST). LST is an important factor contributing to many scientific studies. However, the traditional way to get the LST is relatively hard for some users. This paper illustrates the detailed steps of calculating LST and the free code in GEE. Other users can easily change the dataset and create their LST data of study areas by running codes in GEE.
+
+This study used Landsat 4 to Landsat 8 data and calculated the LST by Statistical Mono-Window (SMW algorithm), and this algorithm is calibrated(@ermida2020). The detailed processing steps are followed in the next figure. The blue words shows functions and the grey words shows datasets used in analysis. Both TOA and SR collection are processed with cloudmask, and this reduces the influence of clouds in the data.
+
+```{r echo=FALSE, out.width = "80%", fig.align='left', cache=FALSE, fig.cap= "GEE processing chain. Source: [Ermida et. al, 2020](https://www.mdpi.com/2072-4292/12/9/1471#)"}
+knitr::include_graphics('week5_data/a4.png') 
+```
+
+*Output*
+
+The bottom right figure shows the final LST in study area, and the remaining figures are the data used in SMW algorithm.
+
+```{r echo=FALSE, out.width = "80%", fig.align='left', cache=FALSE, fig.cap= "Final LST. Source: [Ermida et. al, 2020](https://www.mdpi.com/2072-4292/12/9/1471#)"}
+knitr::include_graphics('week5_data/a3.png') 
+```
+
+*Code link:* <https://earthengine.googlesource.com/users/sofiaermida/landsat_smw_lst>
+
+*(Source: [Ermida et. al, 2020](https://www.mdpi.com/2072-4292/12/9/1471#))*
+
 ## Reflection
+
+Most of the analysis for remote sensing data in GEE is easier than those in R. For example, I don't need to download data, and load them in R or SNAP, and I can easily access the data and visualize them in GEE. Also, the texture measure in GEE is just a few codes, but it is complex in R. However, the PCA in GEE is quite more complex than it in R.
+
+In practice this week, I found print() is a really useful function that can help me identify errors in the code, and it also helps me to check the result of every step in the right way. For instance, there is a wrong object used in the code, and when I applied the get_info() function, it showed there is no this band. Finally, I used print() to find where had the wrong object. In addition, the NDVI in band math will be a useful tool for identifying vegetation in the study area. Similarly, LST in the second case study is also a good variable when exploring some topics about temperature.
+
+The google earth engine codes are sharable, which is similar to GitHub. This provides more chances to group work and generates a better analysis process in teamwork. Also, I can explore many open-source codes so that I can learn other data analysis processes and methods in the future.
+
+I think GEE is a form of big data application in the geospatial data area because it can store massive data on the server, and the users use Javascript to query and load data. The first paper mentions that GEE uses MapReduce architecture (@sidhu2018c), which is popular in big data technology. The idea of this architecture is to divide the big dataset into several small ones, and run the analysis on different servers. The final output will be recompiled and returned to us. I think this idea is really helpful in my learning as a data analyst. When I need to handle massive data, I can reduce the dataset and do analysis. 
+
+```{r echo=FALSE, out.width = "50%", fig.align='left', cache=FALSE, fig.cap= "MapReduce architecture. Source: [Sidhu, Pebesma, and Câmara, 2018](https://www.tandfonline.com/doi/full/10.1080/22797254.2018.1451782)"}
+knitr::include_graphics('week5_data/r1.png') 
+```
+
+Like the video about machine learning at the end of the lecture, I think machine learning will be an efficient tool that can help me to handle large image datasets. I can use the datasets to build a machine-learning model, and the model can predict the component or characteristics in the images. Also, the paper I mentioned in week 4 also uses the machine learning method to discover potential planting sites. So I think this can help me to figure out the classification problems in remote sensing.

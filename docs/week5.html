@@ -83,6 +83,25 @@ code span.st { color: #4070a0; } /* String */
 code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -238,7 +257,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#how-to-use-gee" id="toc-how-to-use-gee" class="nav-link" data-scroll-target="#how-to-use-gee"><span class="toc-section-number">5.1.4</span>  How to use GEE?</a></li>
   <li><a href="#common-examples-of-gee-analysis" id="toc-common-examples-of-gee-analysis" class="nav-link" data-scroll-target="#common-examples-of-gee-analysis"><span class="toc-section-number">5.1.5</span>  Common examples of GEE Analysis</a></li>
   </ul></li>
-  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">5.2</span>  Application</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">5.2</span>  Application</a>
+  <ul class="collapse">
+  <li><a href="#case-1-detecting-land-cover-change-in-singapore" id="toc-case-1-detecting-land-cover-change-in-singapore" class="nav-link" data-scroll-target="#case-1-detecting-land-cover-change-in-singapore"><span class="toc-section-number">5.2.1</span>  <strong>Case 1: Detecting land cover change in Singapore</strong></a></li>
+  <li><a href="#case2-land-surface-temperature-estimation-in-central-portugal" id="toc-case2-land-surface-temperature-estimation-in-central-portugal" class="nav-link" data-scroll-target="#case2-land-surface-temperature-estimation-in-central-portugal"><span class="toc-section-number">5.2.2</span>  <strong>Case2: Land Surface Temperature Estimation in central Portugal</strong></a></li>
+  </ul></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">5.3</span>  Reflection</a></li>
   </ul>
 </nav>
@@ -662,11 +685,98 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="application" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="application"><span class="header-section-number">5.2</span> Application</h2>
+<p>Google earth engine is a powerful tool with many advantages in remote sensing analysis. It does not require users to download large satellite images, and users can access a large range of Landsat images stored on the server. It also has a strong computing platform, and users can do analysis on the server rather than running analysis on personal computers. In this application, I tried to explore some papers, and find the procedure of remote sensing analysis in Google Earth Engine.</p>
+<section id="case-1-detecting-land-cover-change-in-singapore" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="case-1-detecting-land-cover-change-in-singapore"><span class="header-section-number">5.2.1</span> <strong>Case 1: Detecting land cover change in Singapore</strong></h3>
+<p>The first paper was conducted by <span class="citation" data-cites="sidhu2018">Sidhu, Pebesma, and Câmara (<a href="references.html#ref-sidhu2018" role="doc-biblioref">2018a</a>)</span>, and they explored the land cover change by using GEE in Singapore. Also, they examined the ability of GEE, and they found GEE has three strengths. The first one is the ease of functionality, and they can easily upload other data by using Asset Manager. Then, GEE has efficient processing capabilities, and this makes it easy to run spatial reductions. Finally, the computational powers are strong, and the computational times are within a matter of time. Moreover, they found the activity of dredging increased from 2006 to 2010 in Singapore (<span class="citation" data-cites="sidhu2018b">Sidhu, Pebesma, and Câmara (<a href="references.html#ref-sidhu2018b" role="doc-biblioref">2018b</a>)</span>).</p>
+<p><em>Method</em></p>
+<p>The framework of the method they used clearly shows the analysis procedures of doing remote sensing research in GEE. In the data preparation, they uploaded some imagery and filtered imagery on GEE. Then, they used the polygon of the study area to clip the imagery. Finally, they created a function for collection reductions.</p>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="week5_data/a1.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Methodological framework. Source: <a href="https://www.tandfonline.com/doi/full/10.1080/22797254.2018.1451782">Sidhu, Pebesma, and Câmara, 2018</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This framework of method focuses on the analysis of remote sensing data at the temporal level. The main function applied here is reducer in GEE. However, GEE also can do analysis like PCA, and texture measure. This requires a different framework of the method.</p>
+<p><em>Output</em></p>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="week5_data/a2.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Land cover change (2006, 2008, 2010). Source: <a href="https://www.tandfonline.com/doi/full/10.1080/22797254.2018.1451782">Sidhu, Pebesma, and Câmara, 2018</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="case2-land-surface-temperature-estimation-in-central-portugal" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="case2-land-surface-temperature-estimation-in-central-portugal"><span class="header-section-number">5.2.2</span> <strong>Case2: Land Surface Temperature Estimation in central Portugal</strong></h3>
+<p>The second paper applied GEE to estimate land surface temperature(LST). LST is an important factor contributing to many scientific studies. However, the traditional way to get the LST is relatively hard for some users. This paper illustrates the detailed steps of calculating LST and the free code in GEE. Other users can easily change the dataset and create their LST data of study areas by running codes in GEE.</p>
+<p>This study used Landsat 4 to Landsat 8 data and calculated the LST by Statistical Mono-Window (SMW algorithm), and this algorithm is calibrated(<span class="citation" data-cites="ermida2020">Ermida et al. (<a href="references.html#ref-ermida2020" role="doc-biblioref">2020</a>)</span>). The detailed processing steps are followed in the next figure. The blue words shows functions and the grey words shows datasets used in analysis. Both TOA and SR collection are processed with cloudmask, and this reduces the influence of clouds in the data.</p>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="week5_data/a4.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">GEE processing chain. Source: <a href="https://www.mdpi.com/2072-4292/12/9/1471#">Ermida et. al, 2020</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><em>Output</em></p>
+<p>The bottom right figure shows the final LST in study area, and the remaining figures are the data used in SMW algorithm.</p>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="week5_data/a3.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<p></p><figcaption class="figure-caption">Final LST. Source: <a href="https://www.mdpi.com/2072-4292/12/9/1471#">Ermida et. al, 2020</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><em>Code link:</em> <a href="https://earthengine.googlesource.com/users/sofiaermida/landsat_smw_lst" class="uri">https://earthengine.googlesource.com/users/sofiaermida/landsat_smw_lst</a></p>
+<p><em>(Source: <a href="https://www.mdpi.com/2072-4292/12/9/1471#">Ermida et. al, 2020</a>)</em></p>
+</section>
 </section>
 <section id="reflection" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">5.3</span> Reflection</h2>
+<p>Most of the analysis for remote sensing data in GEE is easier than those in R. For example, I don’t need to download data, and load them in R or SNAP, and I can easily access the data and visualize them in GEE. Also, the texture measure in GEE is just a few codes, but it is complex in R. However, the PCA in GEE is quite more complex than it in R.</p>
+<p>In practice this week, I found print() is a really useful function that can help me identify errors in the code, and it also helps me to check the result of every step in the right way. For instance, there is a wrong object used in the code, and when I applied the get_info() function, it showed there is no this band. Finally, I used print() to find where had the wrong object. In addition, the NDVI in band math will be a useful tool for identifying vegetation in the study area. Similarly, LST in the second case study is also a good variable when exploring some topics about temperature.</p>
+<p>The google earth engine codes are sharable, which is similar to GitHub. This provides more chances to group work and generates a better analysis process in teamwork. Also, I can explore many open-source codes so that I can learn other data analysis processes and methods in the future.</p>
+<p>I think GEE is a form of big data application in the geospatial data area because it can store massive data on the server, and the users use Javascript to query and load data. The first paper mentions that GEE uses MapReduce architecture (<span class="citation" data-cites="sidhu2018c">Sidhu, Pebesma, and Câmara (<a href="references.html#ref-sidhu2018c" role="doc-biblioref">2018c</a>)</span>), which is popular in big data technology. The idea of this architecture is to divide the big dataset into several small ones, and run the analysis on different servers. The final output will be recompiled and returned to us. I think this idea is really helpful in my learning as a data analyst. When I need to handle massive data, I can reduce the dataset and do analysis.&nbsp;</p>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="week5_data/r1.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p></p><figcaption class="figure-caption">MapReduce architecture. Source: <a href="https://www.tandfonline.com/doi/full/10.1080/22797254.2018.1451782">Sidhu, Pebesma, and Câmara, 2018</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Like the video about machine learning at the end of the lecture, I think machine learning will be an efficient tool that can help me to handle large image datasets. I can use the datasets to build a machine-learning model, and the model can predict the component or characteristics in the images. Also, the paper I mentioned in week 4 also uses the machine learning method to discover potential planting sites. So I think this can help me to figure out the classification problems in remote sensing.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-ermida2020" class="csl-entry" role="doc-biblioentry">
+Ermida, Sofia L., Patrícia Soares, Vasco Mantas, Frank-M. Göttsche, and Isabel F. Trigo. 2020. <span>“Google Earth Engine Open-Source Code for Land Surface Temperature Estimation from the Landsat Series.”</span> <em>Remote Sensing</em> 12 (9): 1471. <a href="https://doi.org/10.3390/rs12091471">https://doi.org/10.3390/rs12091471</a>.
+</div>
+<div id="ref-sidhu2018" class="csl-entry" role="doc-biblioentry">
+Sidhu, Nanki, Edzer Pebesma, and Gilberto Câmara. 2018a. <span>“Using Google Earth Engine to Detect Land Cover Change: Singapore as a Use Case.”</span> <em>European Journal of Remote Sensing</em> 51 (1): 486–500. <a href="https://doi.org/10.1080/22797254.2018.1451782">https://doi.org/10.1080/22797254.2018.1451782</a>.
+</div>
+<div id="ref-sidhu2018b" class="csl-entry" role="doc-biblioentry">
+———. 2018b. <span>“Using Google Earth Engine to Detect Land Cover Change: Singapore as a Use Case.”</span> <em>European Journal of Remote Sensing</em> 51 (1): 486–500. <a href="https://doi.org/10.1080/22797254.2018.1451782">https://doi.org/10.1080/22797254.2018.1451782</a>.
+</div>
+<div id="ref-sidhu2018c" class="csl-entry" role="doc-biblioentry">
+———. 2018c. <span>“Using Google Earth Engine to Detect Land Cover Change: Singapore as a Use Case.”</span> <em>European Journal of Remote Sensing</em> 51 (1): 486–500. <a href="https://doi.org/10.1080/22797254.2018.1451782">https://doi.org/10.1080/22797254.2018.1451782</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

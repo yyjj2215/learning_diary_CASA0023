@@ -10,7 +10,7 @@ Google Earth Engine is a cloud platform developed by Google, and it can process 
 
 ### Mind map
 
-```{r echo=FALSE, out.width = "80%", fig.align='left', cache=FALSE, fig.cap= "Mind map. Source:Yanbo"}
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Mind map. Source:Yanbo"}
 knitr::include_graphics('week5_data/summary.png') 
 ```
 

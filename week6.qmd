@@ -2,6 +2,91 @@
 
 ## Summary
 
+### Mind map
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Mind map. Source: Yanbo"}
+knitr::include_graphics('week6_data/mindmap.png') 
+```
+
+### **Applications of classified data**
+
+*Monitoring forests ----- illegal logging*
+
+The illegal logging case is very interesting, because illegal loggers use technical ways to avoid the monitoring of forests. When researchers classify the imagery data of forests, small logging areas are ignored because the resolution of imagery (250\*250m) is larger than the size of logging areas. These illegal logging areas are hidden in the picture and not able to be detected. Therefore, the high resolution data is important in the classification problems.
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Illegal logging patch. Source: [Image courtesy of DEMA-AP](https://news.mongabay.com/2019/04/how-a-sheriff-in-brazil-is-using-satellites-to-stop-deforestation/)"}
+knitr::include_graphics('week6_data/illegal.png') 
+```
+
+### Machine learning methods
+
+#### **Decision tree (CART)**
+
+It can apply in both classification and regression problem, which is a binary tree. CART uses the Gini coefficient to make splits, and it represents the model's impurity. The smaller the Gini coefficient indicates the lower the impurity, and the better outputs.
+
+```{r echo=FALSE, out.width = "80%", fig.align='left', cache=FALSE, fig.cap= "Gini Impurity formula. Source: [Huy Bui](https://towardsdatascience.com/decision-tree-fundamentals-388f57a60d2a)"}
+knitr::include_graphics('week6_data/gini.png') 
+```
+
+***Classification***
+
+The predicted values are classified into two or more, and they are **discrete**.
+
+The example of decision tree:
+
+Should I take CASA0023?
+
+```{r echo=FALSE, out.width = "80%", fig.align='left', cache=FALSE, fig.cap= "Decision tree. Source: Yanbo"}
+knitr::include_graphics('week6_data/DT.png') 
+```
+
+***Regression***
+
+The predicted values are **continuous**, like housing price, GCSE scores.
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Decision tree regression. Source: [scikit-learn](https://ogrisel.github.io/scikit-learn.org/sklearn-tutorial/auto_examples/tree/plot_tree_regression.html)"}
+knitr::include_graphics('week6_data/DTR.png') 
+```
+
+**Overfitting**
+
+When the max depth of tree is high (red line in previous figure), the tree learn too fine details, so it casues overfitting problems.
+
+*Two ways to avoid overfitting:*
+
+-   limit how trees grow (eg. a minimum number of pixels in a leaf, 20 is often used)
+
+-   Weakest link pruning (with tree score)
+
+    Tree score = SSR (The sum of squared residuals)+ tree penalty (alpha) \* T (number of leaves)
+
+*How to do in code?*
+
+-   limit number of leaves in each tree
+
+-   change Alpha
+
+*Hyperparameter-tuning*
+
+It is a process that finds the best parameter (Alpha in Decision Tree)of model in machine learning.
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Hyperparameter tuning Worlflow. Source: Yanbo"}
+knitr::include_graphics('week6_data/flow.png') 
+```
+
+#### **Random forest**
+
+It is made up of many decision trees. It reduces the risk of overfitting because it make decision tree from random number of variables (never all of them), and take a random subset of variables again.
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Decision tree vs Random forest. Source: [Rosaria Silipo](https://towardsdatascience.com/from-a-single-decision-tree-to-a-random-forest-b9523be65147)"}
+knitr::include_graphics('week6_data/rf.png') 
+```
+
+Bootstrapping is re-sampling and replacing data to make a decision.
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Random forest classifier on a dataset. Source: [Siddharth Misra, Hao Li](https://www.sciencedirect.com/science/article/pii/B9780128177365000090)"}
+knitr::include_graphics('week6_data/rf.jpg') 
+```
+
 ## Application
 
 ## Reflection

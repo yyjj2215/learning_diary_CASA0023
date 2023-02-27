@@ -68,7 +68,7 @@ When the max depth of tree is high (red line in previous figure), the tree learn
 
 *Hyperparameter-tuning*
 
-It is a process that finds the best parameter (Alpha in Decision Tree)of model in machine learning.
+It is a process that finds the best parameter (Alpha in Decision Tree) of model in machine learning.
 
 ```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Hyperparameter tuning Worlflow. Source: Yanbo"}
 knitr::include_graphics('week6_data/flow.png') 
@@ -83,8 +83,67 @@ knitr::include_graphics('week6_data/rf.png')
 ```
 
 Bootstrapping is re-sampling and replacing data to make a decision.
+
 ```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Random forest classifier on a dataset. Source: [Siddharth Misra, Hao Li](https://www.sciencedirect.com/science/article/pii/B9780128177365000090)"}
 knitr::include_graphics('week6_data/rf.jpg') 
+```
+
+#### Support Vector Machine (SVM)
+
+This algorithm is to find a hyperplane in a N-dimensional space that can classify all data. It introduces in the framework of structural risk minimization (SRM).
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "SVM. Source: [javaTpoint](https://www.javatpoint.com/machine-learning-support-vector-machine-algorithm)"}
+knitr::include_graphics('week6_data/svm1.png') 
+```
+
+SVM in 3D uses a plane instead of a line when there are more than two datasets.
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Hyperplanes in 2D and 3D. Source: [Rohith Gandhi](https://towardsdatascience.com/support-vector-machine-introduction-to-machine-learning-algorithms-934a444fca47)"}
+knitr::include_graphics('week6_data/svm2.png') 
+```
+
+***Hyperparameter-tuning in SVM***
+
+-   Type of kernel (rbf, poly, linear, sigmoid)
+
+-   C controls training data and decision boundary maximisation plus margin errors
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "C = 1000, 50, 5. Source: [Dishaa Agarwal](https://www.analyticsvidhya.com/blog/2021/04/insight-into-svm-support-vector-machine-along-with-code/)"}
+knitr::include_graphics('week6_data/svm3.png') 
+```
+
+-   Gamma (or Sigma) control radius for classified points
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Gamma = 0, 10, 100. Source: [Sunil Ray](https://www.analyticsvidhya.com/blog/2017/09/understaing-support-vector-machine-example-code/)"}
+knitr::include_graphics('week6_data/svm4.png') 
+```
+
+### How image classification works?
+
+Image classification turn every pixel in the image into one pre-defined categorical classification. The following picture shows how computer see in image . In remote sensing, if the pixel values are similar, and they probably are the same classes. The previous machine learning methods are used to classify these pixel values.
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Source: [Thilo Huellmann](https://levity.ai/blog/how-do-image-classifiers-work)"}
+knitr::include_graphics('week6_data/dog.jpeg') 
+```
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Supervised vs Unsupervised procedures. Source: Yanbo"}
+knitr::include_graphics('week6_data/procedure.png') 
+```
+
+### Classification on GEE
+
+My case in Hong Kong code link: <https://code.earthengine.google.com/0158a598d6dd7961dcfeacd9854ebff7>
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Classification workflow in GEE. Source: Yanbo"}
+knitr::include_graphics('week6_data/classification_workflow.png') 
+```
+
+The left picture is the output from CART and it doesn't split training and testing data. The right picture is the output from Random Forest, and the classifier was trained with 70% training pixels, and the training accuracy is 0.9980750721847931, the validation accuracy is 0.9956616052060737. The left output classify more forest areas than the right output.
+
+In my case, class 1 is water, class 2 is forest, class 3 is urban.
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "CART output vs RF output. Source: Yanbo"}
+knitr::include_graphics('week6_data/final_output.png') 
 ```
 
 ## Application

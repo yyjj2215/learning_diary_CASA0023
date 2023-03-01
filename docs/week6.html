@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -190,7 +209,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#how-image-classification-works" id="toc-how-image-classification-works" class="nav-link" data-scroll-target="#how-image-classification-works"><span class="toc-section-number">6.1.4</span>  How image classification works?</a></li>
   <li><a href="#classification-on-gee" id="toc-classification-on-gee" class="nav-link" data-scroll-target="#classification-on-gee"><span class="toc-section-number">6.1.5</span>  Classification on GEE</a></li>
   </ul></li>
-  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">6.2</span>  Application</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">6.2</span>  Application</a>
+  <ul class="collapse">
+  <li><a href="#case1-land-cover-classification-using-google-earth-engine-and-random-forest-classifierthe-role-of-image-composition" id="toc-case1-land-cover-classification-using-google-earth-engine-and-random-forest-classifierthe-role-of-image-composition" class="nav-link" data-scroll-target="#case1-land-cover-classification-using-google-earth-engine-and-random-forest-classifierthe-role-of-image-composition"><span class="toc-section-number">6.2.1</span>  Case1: <strong>Land Cover Classification using Google Earth Engine and Random Forest Classifier—The Role of Image Composition</strong></a></li>
+  <li><a href="#case2-analysis-of-land-use-and-land-cover-using-machine-learning-algorithms-on-google-earth-engine-for-munneru-river-basin-india" id="toc-case2-analysis-of-land-use-and-land-cover-using-machine-learning-algorithms-on-google-earth-engine-for-munneru-river-basin-india" class="nav-link" data-scroll-target="#case2-analysis-of-land-use-and-land-cover-using-machine-learning-algorithms-on-google-earth-engine-for-munneru-river-basin-india"><span class="toc-section-number">6.2.2</span>  Case2: <strong>Analysis of Land Use and Land Cover Using Machine Learning Algorithms on Google Earth Engine for Munneru River Basin, India</strong></a></li>
+  </ul></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">6.3</span>  Reflection</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/yyjj2215/learning_diary_CASA0023/edit/main/week6.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/yyjj2215/learning_diary_CASA0023/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -444,11 +467,166 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="application" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="application"><span class="header-section-number">6.2</span> Application</h2>
+<p>Classification in GEE is one of the common application. When we are doing some of classification problems, what types of data and what methods for classification we are using are essential because it can directly affect the accuracy of our final output. This application part tries to review some studies that provide some information about data selection and method selection when doing classification tasks.</p>
+<section id="case1-land-cover-classification-using-google-earth-engine-and-random-forest-classifierthe-role-of-image-composition" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="case1-land-cover-classification-using-google-earth-engine-and-random-forest-classifierthe-role-of-image-composition"><span class="header-section-number">6.2.1</span> Case1: <strong>Land Cover Classification using Google Earth Engine and Random Forest Classifier—The Role of Image Composition</strong></h3>
+<p>In our lecture, we learned median, mean and other method to reduce the data volume, but we don’t know how it affect the overall accuracy in the classification. This study explores the overall accuracy between time series data and temporal aggregation data in land cover classification. <span class="citation" data-cites="phan2020">Phan, Kuch, and Lehnert (<a href="references.html#ref-phan2020" role="doc-biblioref">2020</a>)</span> found the time-series data has the highest overall accuracy (dataset 7 and 8), but the temporal aggregation data (dataset 2) also have an almost equally high overall accuracy in classification on the GEE. Therefore, they suggested we need to prioritize using temporal aggregation data (like median composite method) because the data volume is low, and it also can reduce the influence of cloud and snow in classification.</p>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="week6_data/a4.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">User’s (UA), producer’s (PA) and overall (OA) accuracies. Source: <a href="https://www.mdpi.com/2072-4292/12/15/2411">Phan, Kuch, and Lehnert, 2020</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Data</strong></p>
+<p>The dataset 1 to 6 are the median composite of image collection, and dataset 7 to 8 are time series data.</p>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="week6_data/a1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">The composition of the eight datasets. Source: <a href="https://www.mdpi.com/2072-4292/12/15/2411">Phan, Kuch, and Lehnert, 2020</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Method</strong></p>
+<p>The flow of method is similar to the practical we did. In this case, I noticed that they used very high resolution images, field work data, and other data in their training and testing data. This supports them to have a better classifier.</p>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="week6_data/a2.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Workflow of analysis. Source: <a href="https://www.mdpi.com/2072-4292/12/15/2411">Phan, Kuch, and Lehnert, 2020</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Output</strong></p>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="week6_data/a3.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">The final output of eight datasets. Source: <a href="https://www.mdpi.com/2072-4292/12/15/2411">Phan, Kuch, and Lehnert, 2020</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="case2-analysis-of-land-use-and-land-cover-using-machine-learning-algorithms-on-google-earth-engine-for-munneru-river-basin-india" class="level3" data-number="6.2.2">
+<h3 data-number="6.2.2" class="anchored" data-anchor-id="case2-analysis-of-land-use-and-land-cover-using-machine-learning-algorithms-on-google-earth-engine-for-munneru-river-basin-india"><span class="header-section-number">6.2.2</span> Case2: <strong>Analysis of Land Use and Land Cover Using Machine Learning Algorithms on Google Earth Engine for Munneru River Basin, India</strong></h3>
+<p>This paper explore three machine learning algorithms including Random Forest (RF), Classification and Regression Tree (CART), and Support Vector Machine (SVM). <span class="citation" data-cites="loukika2021a">Loukika, Keesara, and Sridhar (<a href="references.html#ref-loukika2021a" role="doc-biblioref">2021a</a>)</span> compared performance of three algorithms in the Land cover and land use classification problem. They found all of them have a high performance, but RF is outperformed. In addition, the dataset also have influence on the final performance. The Sentinel-2 dataset has a better performance than Landsat-8 dataset because Sentinel-2 (10m) has a higher resolution than Landsat-8 (30m), and Sentinel-2 dataset has red-edge bands. Therefore, they also found the band combinations and resolution will affect the accuracy of classification.</p>
+<p><strong>Data</strong></p>
+<table class="table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 46%">
+<col style="width: 47%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Year</th>
+<th style="text-align: center;">Total number of images used in Landsat-8</th>
+<th style="text-align: center;">Total number of images used in Sentinel-2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">2016</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">23</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2018</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">44</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2020</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">36</td>
+</tr>
+</tbody>
+</table>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="week6_data/a5.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Landsat-8 and Sentinel-2 band information. Source: <a href="https://www.mdpi.com/2071-1050/13/24/13758">Loukika, Keesara, and Sridhar, 2021</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Method</strong></p>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="week6_data/a6.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Workflow of method. Source: <a href="https://www.mdpi.com/2071-1050/13/24/13758">Loukika, Keesara, and Sridhar, 2021</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Output</strong></p>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="week6_data/a7.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Landsat-8 output. Source: <a href="https://www.mdpi.com/2071-1050/13/24/13758">Loukika, Keesara, and Sridhar, 2021</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="week6_data/a8.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Sentinel-2 output. Source: <a href="https://www.mdpi.com/2071-1050/13/24/13758">Loukika, Keesara, and Sridhar, 2021</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="week6_data/a9.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Kappa coefficient and overall accuracy of Landsat-8 and Sentinel-2. Source: <a href="https://www.mdpi.com/2071-1050/13/24/13758">Loukika, Keesara, and Sridhar, 2021</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>In the above table, all overall accuracy is relatively high in classification, so there are probably potential overfitting problems. <span class="citation" data-cites="loukika2021b">Loukika, Keesara, and Sridhar (<a href="references.html#ref-loukika2021b" role="doc-biblioref">2021b</a>)</span> discussed some vegetation was misclassified as forest, and some parts of river was misclassified as barren or built-up. These misclassification probably is one of reason that causes overfitting, and it should be always notified in the classification.</p>
+</section>
 </section>
 <section id="reflection" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">6.3</span> Reflection</h2>
+<p>Hyperparameter-tuning is really useful in training a classifier because I have used this concept in training a regression model. It provides me a better R2 in my housing prediction case. Although the content and purpose are different, the method is similar. Both of them are tries to find the best parameter to build the model. For example, finding how many trees in RF can be the best classifier.</p>
+<p>In the practical, my training accuracy and validation accuracy is so high, and it has overfitting problems. I think there are two reasons, the number of classes is small. Only three classes in my study area, and many area are misclassified into these three classes, in particular, forest and urban. The other reason probably is because I don’t pick various training data. Some of my training data I draw only have the short distance among them, this may cause they has the higher similarity or spatial autocorrelation. Therefore, I think I need to learn more methods that can help me avoid overfitting problems and selecting better training data.</p>
+<p>The evaluation methods of classification was not mentioned in this week content, and this is also one of important component in the machine learning. In the application, two papers mentions user’s accuracy, producers’ accuracy, overall accuracy, and Kappa coefficient. These evaluation metrics that I need to explore in the following weeks.</p>
+<p>The median composite method has been mentioned many times in previous weeks, but I don’t consider how it will affect the performance of classifier. In application case1, the performance of this method has been examined. I think I can use median composite method in my future analysis.</p>
+<p>As for data selection, I think I need to find the better resolution data with a good combination of bands, which may provide me a better classification. As for method selection, I think it may depend on my research purposes and objectives. Like Andy mentioned in the class, high accuracy doesn’t always mean the good output. In my understanding, RF, CART, and SVM are machine learning methods in the remote sensing, but the deep learning nowadays are also highly applied into many fields. In the future, I want to explore how deep learning method, like CNN, RNN applied into remote sensing problems.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-loukika2021a" class="csl-entry" role="doc-biblioentry">
+Loukika, Kotapati Narayana, Venkata Reddy Keesara, and Venkataramana Sridhar. 2021a. <span>“Analysis of Land Use and Land Cover Using Machine Learning Algorithms on Google Earth Engine for Munneru River Basin, India.”</span> <em>Sustainability</em> 13 (24): 13758. <a href="https://doi.org/10.3390/su132413758">https://doi.org/10.3390/su132413758</a>.
+</div>
+<div id="ref-loukika2021b" class="csl-entry" role="doc-biblioentry">
+———. 2021b. <span>“Analysis of Land Use and Land Cover Using Machine Learning Algorithms on Google Earth Engine for Munneru River Basin, India.”</span> <em>Sustainability</em> 13 (24): 13758. <a href="https://doi.org/10.3390/su132413758">https://doi.org/10.3390/su132413758</a>.
+</div>
+<div id="ref-phan2020" class="csl-entry" role="doc-biblioentry">
+Phan, Thanh Noi, Verena Kuch, and Lukas W. Lehnert. 2020. <span>“Land Cover Classification Using Google Earth Engine and Random Forest Classifier<span></span>The Role of Image Composition.”</span> <em>Remote Sensing</em> 12 (15): 2411. <a href="https://doi.org/10.3390/rs12152411">https://doi.org/10.3390/rs12152411</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

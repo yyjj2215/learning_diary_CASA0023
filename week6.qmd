@@ -148,4 +148,84 @@ knitr::include_graphics('week6_data/final_output.png')
 
 ## Application
 
+Classification in GEE is one of the common application. When we are doing some of classification problems, what types of data and what methods for classification we are using are essential because it can directly affect the accuracy of our final output. This application part tries to review some studies that provide some information about data selection and method selection when doing classification tasks.
+
+### Case1: **Land Cover Classification using Google Earth Engine and Random Forest Classifier---The Role of Image Composition**
+
+In our lecture, we learned median, mean and other method to reduce the data volume, but we don't know how it affect the overall accuracy in the classification. This study explores the overall accuracy between time series data and temporal aggregation data in land cover classification. @phan2020 found the time-series data has the highest overall accuracy (dataset 7 and 8), but the temporal aggregation data (dataset 2) also have an almost equally high overall accuracy in classification on the GEE. Therefore, they suggested we need to prioritize using temporal aggregation data (like median composite method) because the data volume is low, and it also can reduce the influence of cloud and snow in classification.
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "User’s (UA), producer’s (PA) and overall (OA) accuracies. Source: [Phan, Kuch, and Lehnert, 2020](https://www.mdpi.com/2072-4292/12/15/2411)"}
+knitr::include_graphics('week6_data/a4.png') 
+```
+
+**Data**
+
+The dataset 1 to 6 are the median composite of image collection, and dataset 7 to 8 are time series data.
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "The composition of the eight datasets. Source: [Phan, Kuch, and Lehnert, 2020](https://www.mdpi.com/2072-4292/12/15/2411)"}
+knitr::include_graphics('week6_data/a1.png') 
+```
+
+**Method**
+
+The flow of method is similar to the practical we did. In this case, I noticed that they used very high resolution images, field work data, and other data in their training and testing data. This supports them to have a better classifier.
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Workflow of analysis. Source: [Phan, Kuch, and Lehnert, 2020](https://www.mdpi.com/2072-4292/12/15/2411)"}
+knitr::include_graphics('week6_data/a2.png') 
+```
+
+**Output**
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "The final output of eight datasets. Source: [Phan, Kuch, and Lehnert, 2020](https://www.mdpi.com/2072-4292/12/15/2411)"}
+knitr::include_graphics('week6_data/a3.png') 
+```
+
+### Case2: **Analysis of Land Use and Land Cover Using Machine Learning Algorithms on Google Earth Engine for Munneru River Basin, India**
+
+This paper explore three machine learning algorithms including Random Forest (RF), Classification and Regression Tree (CART), and Support Vector Machine (SVM). @loukika2021a compared performance of three algorithms in the Land cover and land use classification problem. They found all of them have a high performance, but RF is outperformed. In addition, the dataset also have influence on the final performance. The Sentinel-2 dataset has a better performance than Landsat-8 dataset because Sentinel-2 (10m) has a higher resolution than Landsat-8 (30m), and Sentinel-2 dataset has red-edge bands. Therefore, they also found the band combinations and resolution will affect the accuracy of classification.
+
+**Data**
+
+| Year | Total number of images used in Landsat-8 | Total number of images used in Sentinel-2 |
+|:----:|:----------------------------------------:|:-----------------------------------------:|
+| 2016 |                    10                    |                    23                     |
+| 2018 |                    15                    |                    44                     |
+| 2020 |                    14                    |                    36                     |
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Landsat-8 and Sentinel-2 band information. Source: [Loukika, Keesara, and Sridhar, 2021](https://www.mdpi.com/2071-1050/13/24/13758)"}
+knitr::include_graphics('week6_data/a5.png') 
+```
+
+**Method**
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Workflow of method. Source: [Loukika, Keesara, and Sridhar, 2021](https://www.mdpi.com/2071-1050/13/24/13758)"}
+knitr::include_graphics('week6_data/a6.png') 
+```
+
+**Output**
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Landsat-8 output. Source: [Loukika, Keesara, and Sridhar, 2021](https://www.mdpi.com/2071-1050/13/24/13758)"}
+knitr::include_graphics('week6_data/a7.png') 
+```
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Sentinel-2 output. Source: [Loukika, Keesara, and Sridhar, 2021](https://www.mdpi.com/2071-1050/13/24/13758)"}
+knitr::include_graphics('week6_data/a8.png') 
+```
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Kappa coefficient and overall accuracy of Landsat-8 and Sentinel-2. Source: [Loukika, Keesara, and Sridhar, 2021](https://www.mdpi.com/2071-1050/13/24/13758)"}
+knitr::include_graphics('week6_data/a9.png') 
+```
+
+In the above table, all overall accuracy is relatively high in classification, so there are probably potential overfitting problems. @loukika2021b discussed some vegetation was misclassified as forest, and some parts of river was misclassified as barren or built-up. These misclassification probably is one of reason that causes overfitting, and it should be always notified in the classification.
+
 ## Reflection
+
+Hyperparameter-tuning is really useful in training a classifier because I have used this concept in training a regression model. It provides me a better R2 in my housing prediction case. Although the content and purpose are different, the method is similar. Both of them are tries to find the best parameter to build the model. For example, finding how many trees in RF can be the best classifier.
+
+In the practical, my training accuracy and validation accuracy is so high, and it has overfitting problems. I think there are two reasons, the number of classes is small. Only three classes in my study area, and many area are misclassified into these three classes, in particular, forest and urban. The other reason probably is because I don't pick various training data. Some of my training data I draw only have the short distance among them, this may cause they has the higher similarity or spatial autocorrelation. Therefore, I think I need to learn more methods that can help me avoid overfitting problems and selecting better training data.
+
+The evaluation methods of classification was not mentioned in this week content, and this is also one of important component in the machine learning. In the application, two papers mentions user's accuracy, producers' accuracy, overall accuracy, and Kappa coefficient. These evaluation metrics that I need to explore in the following weeks.
+
+The median composite method has been mentioned many times in previous weeks, but I don't consider how it will affect the performance of classifier. In application case1, the performance of this method has been examined. I think I can use median composite method in my future analysis.
+
+As for data selection, I think I need to find the better resolution data with a good combination of bands, which may provide me a better classification. As for method selection, I think it may depend on my research purposes and objectives. Like Andy mentioned in the class, high accuracy doesn't always mean the good output. In my understanding, RF, CART, and SVM are machine learning methods in the remote sensing, but the deep learning nowadays are also highly applied into many fields. In the future, I want to explore how deep learning method, like CNN, RNN applied into remote sensing problems.

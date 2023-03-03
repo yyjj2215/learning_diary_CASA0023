@@ -10,7 +10,7 @@ I'm Yanbo Liu from Zhangjiakou, Hebei Province, China. I currently study in Soci
 
 #### 
 ```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= ""}
-knitr::include_graphics('person.jpg') 
+knitr::include_graphics('me.jpg') 
 ```
 :::
 

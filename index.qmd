@@ -2,6 +2,21 @@
 
 Hello!
 
-Welcome to the learning diary. This is a book created for learning CASA0023 Remotely Sensing Cities and Environments.
+Welcome to my learning diary!
 
-I would like to thank Dr Andrew MacLachlan for helping with this book.
+::: {layout-ncol="2"}
+## About me
+I'm Yanbo Liu from Zhangjiakou, Hebei Province, China. I currently study in Social and Geographic Data Science program at University College London (UCL). I finished my undergraduate in Urban Forestry at the University of British Columbia (UBC). I hope I will become a geographic data analyst, and I'm interested in spatial data analysis, machine learning, and deep learning. I think data is future!
+
+#### 
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= ""}
+knitr::include_graphics('person.jpg') 
+```
+:::
+
+## About this book
+This book was written in Spring 2023 at UCL master, and it was part of my assessment for CASA0023 (Remote Sensing Cities and Environments). It was edited by using Quarto Book, and all codes were opensource on my Github. The contents cover remote sensing principles, applications, and its analysis in R and Google Earth Engine. If you are interested in remote sensing or spatial data analysis, I think this book would be helpful.
+
+## Ackownledgement
+
+I would like to thank Dr. Andrew MacLachlan for helping with this book.

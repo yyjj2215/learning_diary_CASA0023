@@ -187,7 +187,7 @@ This paper explore three machine learning algorithms including Random Forest (RF
 **Data**
 
 | Year | Total number of images used in Landsat-8 | Total number of images used in Sentinel-2 |
-|:----:|:----------------------------------------:|:-----------------------------------------:|
+|:------------:|:---------------------------:|:---------------------------:|
 | 2016 |                    10                    |                    23                     |
 | 2018 |                    15                    |                    44                     |
 | 2020 |                    14                    |                    36                     |

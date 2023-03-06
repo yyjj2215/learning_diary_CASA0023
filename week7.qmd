@@ -2,6 +2,138 @@
 
 ## Summary
 
+### Mind map
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Mind map. Source: Yanbo"}
+knitr::include_graphics('week7_data/mind.png') 
+```
+
+### Classification Approaches
+
+#### Object based image analysis
+
+In classification, a pixel can't represent an object, and an object normally is made up of many pixels. There are many methods in object based image analysis. Superpixels consider the similarity of pixels and homogeneity of the pixels, and Simple Linear Iterative Clustering (SLIC) is one of most common method to generate superpixels. For example, the centroid of objects moves iteratively, and the images become more object-based images.
+
+```{r echo=FALSE, out.width = "80%", fig.align='left', cache=FALSE, fig.cap= "Supercells. Source: [Nowosad 2021](https://jakubnowosad.com/ogh2021/#10)"}
+knitr::include_graphics('week7_data/ob.gif') 
+```
+
+Bears in right picture are objected based, and similar pixels are clustered as superpixels.
+
+```{r echo=FALSE, out.width = "80%", fig.align='left', cache=FALSE, fig.cap= "Supercells. Source: [Darshite Jain](https://darshita1405.medium.com/superpixels-and-slic-6b2d8a6e4f08)"}
+knitr::include_graphics('week7_data/bear.png') 
+```
+
+*Other algorithms*
+
+-   multi-resolution segmentation in [eCognition Definiens Developer](https://geospatial.trimble.com/products-and-solutions/trimble-ecognition)
+
+#### Sub pixel analysis
+
+It was also called Spectral Mixture Analysis, Linear spectral unmixing. It proivdes the details in every single pixel, and it estimates the fractions that made up of this pixel. For example, it shows how many percent of urban area, and how many percent of vegetation, and how many percent of water.
+
+```{r echo=FALSE, out.width = "80%", fig.align='left', cache=FALSE, fig.cap= "Source: [Machado and Small 2013](https://www.researchgate.net/publication/259715697_IDENTIFYING_MULTI-DECADAL_CHANGES_OF_THE_SAO_PAULO_URBAN_AGGLOMERATION_WITH_MIXED_REMOTE_SENSING_TECHNIQUES_SPECTRAL_MIXTURE_ANALYSIS_AND_NIGHT_LIGHTS/figures?lo=1)"}
+knitr::include_graphics('week7_data/sub.png') 
+```
+
+In terms of how it works, the linear sum of endmembers weighted by associated endmember fraction represents the reflectance in each bands. For example, water is 13 in Band 3, and this is a endmember. Then, the percentage of different objects can be calculated based on endmembers.
+
+```{r echo=FALSE, out.width = "40%", fig.align='left', cache=FALSE, fig.cap= "Source: [Andrew 2023](https://andrewmaclachlan.github.io/CASA0023-lecture-7/?panelset1=data2#18)"}
+knitr::include_graphics('week7_data/band.png') 
+```
+
+### Accuracy assessment
+
+The evaluation is essential part in the classification, and different evaluation methods may give us different performances of our classification. The terms in remote sensing are different in machine learning, and we need to balance the accuracy between producer accuracy and user accuracy because it' hard to get the best in both of them.
+
+**Producer, user and overall accuracy**
+
+|     Remote Sensing     |                   | Machine Learning |
+|:----------------------:|:-----------------:|:----------------:|
+| Producer accuracy (PA) |     TP/TP+FN      |      Recall      |
+|   User accuracy (UA)   |     TP/TP+FP      |    Precision     |
+| Overall accuracy (OA)  | TP+TN/TP+FP+FN+TN | Overall accuracy |
+
+```{r echo=FALSE, out.width = "60%", fig.align='left', cache=FALSE, fig.cap= "Confusion Matrix Source: [Rohit 2023](https://www.v7labs.com/blog/confusion-matrix-guide)"}
+knitr::include_graphics('week7_data/matrix.png') 
+```
+
+**Errors**
+
+provide performance of our classification. The following matrix shows error matrix in remote sensing.
+
+-   Error of omission = 100 - PA
+
+    Open land = 42/180 = 24%
+
+    Open land producer = 138/180= 76%
+
+-   Error of commission = 100 - UA
+
+    Open land = 68/206 = 33%
+
+    Open land user = 138/206= 67%
+
+```{r echo=FALSE, out.width = "80%", fig.align='left', cache=FALSE, fig.cap= "Error Matrix Source: [Chegg](https://www.chegg.com/homework-help/questions-and-answers/4-based-error-matrix-accuracy-report-calculate-following-15-points-error-matrix-example-su-q47737786)"}
+knitr::include_graphics('week7_data/error.png') 
+```
+
+**Kappa**
+
+express the accuracy of an image compared to the results by chance. However, it has two limitations, one is hard to define a good value, and the other is Kappa values have different levels of accuracy.
+
+**F1 score**
+
+combines producer accuracy and user accuracy, range from 0 to 1, and 1 is the best performance. It also has two limitations, it doesn't consider the true negative, and it considers user accuracy and producer are equally important.
+
+```{r echo=FALSE, out.width = "80%", fig.align='left', cache=FALSE, fig.cap= ""}
+knitr::include_graphics('week7_data/F1.png') 
+```
+
+**Receiver Operating Characteristic Curve (ROC Curve)**
+
+is a graph showing the performance of classifier at all classification thresholds.
+
+AUC (area under the ROC Curve) stands for all area under the entire ROC Curve.
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "ROC and AUC: [Jared 2022](https://mlu-explain.github.io/roc-auc/)"}
+knitr::include_graphics('week7_data/ROC.png') 
+```
+
+### Test and train data
+
+**Cross-validation**
+
+a resampling method that uses different portions of the data to test and train a classifier on different iterations. The accuracy is the average of all classifers.
+
+```{r echo=FALSE, out.width = "80%", fig.align='left', cache=FALSE, fig.cap= "Cross validation: [scikit learn](https://scikit-learn.org/stable/modules/cross_validation.html)"}
+knitr::include_graphics('week7_data/cv.png') 
+```
+
+**Spatial cross validation**
+
+is the cross validation that consider spatial dependence. Spatial autocorrelation are happens between training and testing data. Spatial cross validation spatially partitioning the folded data, and stops training and testing data being near each other. For example, if there are two seprate forest in the image, and the training data are from the first forest, and the testing data are from second forest.
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Cross validation vs Spatial cross validation: [Chiara 2021](https://towardsdatascience.com/spatial-cross-validation-using-scikit-learn-74cb8ffe0ab9)"}
+knitr::include_graphics('week7_data/scv.png') 
+```
+
+### Useful pre-classified data resource
+
+Many pre-classified data we can use in our future analysis, and the Dynamic World also combine deep learning approaches in their classification.
+
+1.  GlobeLand30 - 30m for 2000, 2010 and 2020: <http://www.globallandcover.com/home_en.html?type=data>
+
+2.  European Space Agency's (ESA) Climate Change Initiative (CCI) annual global land cover (300 m) (1992-2015): <https://climate.esa.int/en/projects/land-cover/data/>
+
+3.  Dynamic World - near real time 10m: <https://www.dynamicworld.app/explore/>
+
+4.  MODIS: <https://modis.gsfc.nasa.gov/data/dataprod/mod12.php>
+
+5.  Google building data: <https://sites.research.google/open-buildings/>
+
+Source: [Andrew 2023](https://andrewmaclachlan.github.io/CASA0023-lecture-7/?panelset1=data2#6)
+
 ## Application
 
 ## Reflection

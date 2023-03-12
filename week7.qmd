@@ -118,6 +118,28 @@ is the cross validation that consider spatial dependence. Spatial autocorrelatio
 knitr::include_graphics('week7_data/scv.png') 
 ```
 
+### Applications of classification approaches on GEE
+
+The approaches including subpixel, superpixel, and object-based have been introduced in the previous part, and here I used GEE to do a classification for Tianjian, China on GEE. The key steps were summarized in the following workflow.
+
+My code link is <https://code.earthengine.google.com/4eaa3862a6f9c091e16da1f2c8b82ff2>
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Workflow. Source: Yanbo"}
+knitr::include_graphics('week7_data/workflow.png') 
+```
+
+The following pictures are my results. In the super pixel, the pixels were clustered as a bigger pixel. The differences among small pixels were removed, and they become a bigger pixel. In object-based, if there are more higher resolution data, the results will be more better than current one.
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Results of practical. Source: Yanbo"}
+knitr::include_graphics('week7_data/prac.png') 
+```
+
+In subpixel, the classified results are based on the percent of each pixel. If the pixel is greater than 0.5, then give this pixel a value, like 1 refers to high_urban.
+
+```{r echo=FALSE, out.width = "50%", fig.align='left', cache=FALSE, fig.cap= "Percent of each endmember per pixel. Source: Yanbo"}
+knitr::include_graphics('week7_data/sub_percent.png') 
+```
+
 ### Useful pre-classified data resource
 
 Many pre-classified data we can use in our future analysis, and the Dynamic World also combine deep learning approaches in their classification.

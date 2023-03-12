@@ -130,6 +130,38 @@ knitr::include_graphics('week8_data/uf.png')
 knitr::include_graphics('week8_data/fish.png') 
 ```
 
+### Temperature applications on GEE
+
+The export the temperture shapefile on GEE is useful for doing future researches. In this practical, I used both Landsat and MODIS data to generate LST data for Tianjin, China. The MODIS data is better because it can scan twice a day for the same place. The detailed steps were summarzied in the workflow.
+
+My code link: <https://code.earthengine.google.com/6492a6b735deeb5904360326cfde723e>
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Approaching steps. Source: Yanbo"}
+knitr::include_graphics('week8_data/workflow.png') 
+```
+
+The LST from Landsat was displayed using the same palette with MODIS, so it seems not really good, and also there is a clear dividing line on the map. I guess this is because the LST data were extracted from two separated Landsat images.
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "landsat LST vs MODIS LST. Source: Yanbo"}
+knitr::include_graphics('week8_data/temp.png') 
+```
+
+The spatial unit temperature were calculated on GEE, and then exported to shapefile using R to analyze percentile rank. The process of this step is easier in R rather than using GEE.
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Spatial unit temperature from R. Source: Yanbo"}
+knitr::include_graphics('week8_data/sec_temp.png') 
+```
+
+```{r echo=FALSE, out.width = "50%", fig.align='left', cache=FALSE, fig.cap= "Spatial unit temperature from GEE. Source: Yanbo"}
+knitr::include_graphics('week8_data/percent_temp.png') 
+```
+
+The time series chart was generated on GEE, which is quite easy.
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Time series chart. Source: Yanbo"}
+knitr::include_graphics('week8_data/ee-chart.png') 
+```
+
 ## Application
 
 ## Reflection

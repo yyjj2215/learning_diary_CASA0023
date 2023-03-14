@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -190,7 +209,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#approaching-projects" id="toc-approaching-projects" class="nav-link" data-scroll-target="#approaching-projects"><span class="toc-section-number">8.1.4</span>  Approaching projects</a></li>
   <li><a href="#temperature-applications-on-gee" id="toc-temperature-applications-on-gee" class="nav-link" data-scroll-target="#temperature-applications-on-gee"><span class="toc-section-number">8.1.5</span>  Temperature applications on GEE</a></li>
   </ul></li>
-  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">8.2</span>  Application</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">8.2</span>  Application</a>
+  <ul class="collapse">
+  <li><a href="#case1-the-effects-of-3d-urban-morphology-on-the-uhi" id="toc-case1-the-effects-of-3d-urban-morphology-on-the-uhi" class="nav-link" data-scroll-target="#case1-the-effects-of-3d-urban-morphology-on-the-uhi"><span class="toc-section-number">8.2.1</span>  Case1: The effects of 3D urban morphology on the UHI</a></li>
+  <li><a href="#case2-cooling-effects-of-city-scale-efforts-to-reduce-urban-heat-island" id="toc-case2-cooling-effects-of-city-scale-efforts-to-reduce-urban-heat-island" class="nav-link" data-scroll-target="#case2-cooling-effects-of-city-scale-efforts-to-reduce-urban-heat-island"><span class="toc-section-number">8.2.2</span>  Case2: cooling effects of city scale efforts to reduce urban heat island</a></li>
+  </ul></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">8.3</span>  Reflection</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/yyjj2215/learning_diary_CASA0023/edit/main/week8.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/yyjj2215/learning_diary_CASA0023/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -472,11 +495,65 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="application" class="level2" data-number="8.2">
 <h2 data-number="8.2" class="anchored" data-anchor-id="application"><span class="header-section-number">8.2</span> Application</h2>
+<p>Urban heat island (UHI) is popular research topic in recent years. Some of content about UHI is covered in this week course and practical, but they are not enough. There are many other methods and ways that contribute to the better understanding of UHI, the estimation of UHI and mitigation of UHI effects. This application part tries to explore more about them.</p>
+<section id="case1-the-effects-of-3d-urban-morphology-on-the-uhi" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="case1-the-effects-of-3d-urban-morphology-on-the-uhi"><span class="header-section-number">8.2.1</span> Case1: The effects of 3D urban morphology on the UHI</h3>
+<p>In recent decades, many cities not only expand horizontally, but also develop vertically. There are many high-rise buildings located in the center of cities. The estimation of UHI in the previous paper are limited to talking about 2D urban morphology. <span class="citation" data-cites="huang2019">Huang and Wang (<a href="references.html#ref-huang2019" role="doc-biblioref">2019a</a>)</span> examined a case study about the 3D urban morphology and land surface temperature (LST) in Wuhan, China. They found the dispersed high-rise building have contributions to reduce LST, and trees are the most important factor that reduces the LST in the city. In their study, they used a sky view factor (SVF) (0 no sky visible, 1 no horizon obstructions visible), mean height (MH), height variance (HV), and normalized height variance (NHV) to measure 3D information. Based on these factors, they found 3D urban morphology has effects on LST, but the relationship between them is complicated. There are many different arguments about this. I think the better understanding of UHI and the structure of our city will help urban policy mangers to generate better interventions.</p>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="week8_data/a1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">a) Building height in Wuhan. b) Buidling height in smaple area. c) SVF in smaple area. Source: <a href="https://www.sciencedirect.com/science/article/pii/S0924271619301066?casa_token=Ropxr8kbVA0AAAAA:vAHivu82w70rDaHnzSg6JvWUiuWYW1dWCBAgXrjASKHCGAElhHUHGqAImLevobpmW4dcM_muzw">Huang and Wang. 2019</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This study also used Landsat-8 to measure LST, and ZY-3 to map land cover. The ZiYuan-3 (ZY-3) is a Chinese satellite, which has 50 km swath width, 2.1 m spatial resolution, and 5.8 m multispectral scanner (<span class="citation" data-cites="huang2019a">Huang and Wang (<a href="references.html#ref-huang2019a" role="doc-biblioref">2019b</a>)</span>). This satellite provides good spatial resolution data, which may be useful for doing some researches about Chinese cities.</p>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="week8_data/a2.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Data used in study. Source: <a href="https://www.sciencedirect.com/science/article/pii/S0924271619301066?casa_token=Ropxr8kbVA0AAAAA:vAHivu82w70rDaHnzSg6JvWUiuWYW1dWCBAgXrjASKHCGAElhHUHGqAImLevobpmW4dcM_muzw">Huang and Wang. 2019</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="case2-cooling-effects-of-city-scale-efforts-to-reduce-urban-heat-island" class="level3" data-number="8.2.2">
+<h3 data-number="8.2.2" class="anchored" data-anchor-id="case2-cooling-effects-of-city-scale-efforts-to-reduce-urban-heat-island"><span class="header-section-number">8.2.2</span> Case2: cooling effects of city scale efforts to reduce urban heat island</h3>
+<p>In the course content, the mitigation of urban heat island focus on using replanning of blocks and increasing green vegetation. This study provides another way applied in Chicago successfully reduce the UHI. <span class="citation" data-cites="mackey2012">Mackey, Lee, and Smith (<a href="references.html#ref-mackey2012" role="doc-biblioref">2012a</a>)</span> proves the reflective strategies has more cooling functions than vegetation. The following figure in the study shows when the Albedo increase 0.16, the temperature will reduce 5°C. Compared to an increase of NDVI with 0.25, there are only 2.6 °C decrease. This result is different to many studies that support the vegetation is the most important factor in cooling LST. <span class="citation" data-cites="mackey2012a">Mackey, Lee, and Smith (<a href="references.html#ref-mackey2012a" role="doc-biblioref">2012b</a>)</span> also mentioned this method would have the greatest cooling effects with the small investigation. Therefore, I think city managers also can consider using reflective materials if the situations of their cities are similar to Chicago.</p>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="week8_data/a3.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Examples of relationship among NDVI, albedo, and temperature. Source: <a href="https://www.sciencedirect.com/science/article/pii/S0360132311002472?casa_token=3n6eCEdZWxYAAAAA:MA4UqEFlbIlCT00b-1rGqPCTvnLilb6DrcJHeP7kGQpkcnE0AdG6hCPW6chbBK3c9IJZ5VRX_w">Mackey, Lee, and Smith. 2012</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
 </section>
 <section id="reflection" class="level2" data-number="8.3">
 <h2 data-number="8.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">8.3</span> Reflection</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-huang2019" class="csl-entry" role="doc-biblioentry">
+Huang, Xin, and Ying Wang. 2019a. <span>“Investigating the Effects of 3D Urban Morphology on the Surface Urban Heat Island Effect in Urban Functional Zones by Using High-Resolution Remote Sensing Data: A Case Study of Wuhan, Central China.”</span> <em>ISPRS Journal of Photogrammetry and Remote Sensing</em> 152 (June): 119–31. <a href="https://doi.org/10.1016/j.isprsjprs.2019.04.010">https://doi.org/10.1016/j.isprsjprs.2019.04.010</a>.
+</div>
+<div id="ref-huang2019a" class="csl-entry" role="doc-biblioentry">
+———. 2019b. <span>“Investigating the Effects of 3D Urban Morphology on the Surface Urban Heat Island Effect in Urban Functional Zones by Using High-Resolution Remote Sensing Data: A Case Study of Wuhan, Central China.”</span> <em>ISPRS Journal of Photogrammetry and Remote Sensing</em> 152 (June): 119–31. <a href="https://doi.org/10.1016/j.isprsjprs.2019.04.010">https://doi.org/10.1016/j.isprsjprs.2019.04.010</a>.
+</div>
+<div id="ref-mackey2012" class="csl-entry" role="doc-biblioentry">
+Mackey, Christopher W., Xuhui Lee, and Ronald B. Smith. 2012a. <span>“Remotely Sensing the Cooling Effects of City Scale Efforts to Reduce Urban Heat Island.”</span> <em>Building and Environment</em> 49 (March): 348–58. <a href="https://doi.org/10.1016/j.buildenv.2011.08.004">https://doi.org/10.1016/j.buildenv.2011.08.004</a>.
+</div>
+<div id="ref-mackey2012a" class="csl-entry" role="doc-biblioentry">
+———. 2012b. <span>“Remotely Sensing the Cooling Effects of City Scale Efforts to Reduce Urban Heat Island.”</span> <em>Building and Environment</em> 49 (March): 348–58. <a href="https://doi.org/10.1016/j.buildenv.2011.08.004">https://doi.org/10.1016/j.buildenv.2011.08.004</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

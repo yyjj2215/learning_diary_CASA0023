@@ -164,4 +164,28 @@ knitr::include_graphics('week8_data/ee-chart.png')
 
 ## Application
 
+Urban heat island (UHI) is popular research topic in recent years. Some of content about UHI is covered in this week course and practical, but they are not enough. There are many other methods and ways that contribute to the better understanding of UHI, the estimation of UHI and mitigation of UHI effects. This application part tries to explore more about them.
+
+### Case1: The effects of 3D urban morphology on the UHI
+
+In recent decades, many cities not only expand horizontally, but also develop vertically. There are many high-rise buildings located in the center of cities. The estimation of UHI in the previous paper are limited to talking about 2D urban morphology. @huang2019 examined a case study about the 3D urban morphology and land surface temperature (LST) in Wuhan, China. They found the dispersed high-rise building have contributions to reduce LST, and trees are the most important factor that reduces the LST in the city. In their study, they used a sky view factor (SVF) (0 no sky visible, 1 no horizon obstructions visible), mean height (MH), height variance (HV), and normalized height variance (NHV) to measure 3D information. Based on these factors, they found 3D urban morphology has effects on LST, but the relationship between them is complicated. There are many different arguments about this. I think the better understanding of UHI and the structure of our city will help urban policy mangers to generate better interventions.
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "a) Building height in Wuhan. b) Buidling height in smaple area. c) SVF in smaple area. Source: [Huang and Wang. 2019](https://www.sciencedirect.com/science/article/pii/S0924271619301066?casa_token=Ropxr8kbVA0AAAAA:vAHivu82w70rDaHnzSg6JvWUiuWYW1dWCBAgXrjASKHCGAElhHUHGqAImLevobpmW4dcM_muzw)"}
+knitr::include_graphics('week8_data/a1.png') 
+```
+
+This study also used Landsat-8 to measure LST, and ZY-3 to map land cover. The ZiYuan-3 (ZY-3) is a Chinese satellite, which has 50 km swath width, 2.1 m spatial resolution, and 5.8 m multispectral scanner (@huang2019a). This satellite provides good spatial resolution data, which may be useful for doing some researches about Chinese cities.
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Data used in study. Source: [Huang and Wang. 2019](https://www.sciencedirect.com/science/article/pii/S0924271619301066?casa_token=Ropxr8kbVA0AAAAA:vAHivu82w70rDaHnzSg6JvWUiuWYW1dWCBAgXrjASKHCGAElhHUHGqAImLevobpmW4dcM_muzw)"}
+knitr::include_graphics('week8_data/a2.png') 
+```
+
+### Case2: cooling effects of city scale efforts to reduce urban heat island
+
+In the course content, the mitigation of urban heat island focus on using replanning of blocks and increasing green vegetation. This study provides another way applied in Chicago successfully reduce the UHI. @mackey2012 proves the reflective strategies has more cooling functions than vegetation. The following figure in the study shows when the Albedo increase 0.16, the temperature will reduce 5°C. Compared to an increase of NDVI with 0.25, there are only 2.6 °C decrease. This result is different to many studies that support the vegetation is the most important factor in cooling LST. @mackey2012a also mentioned this method would have the greatest cooling effects with the small investigation. Therefore, I think city managers also can consider using reflective materials if the situations of their cities are similar to Chicago.
+
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Examples of relationship among NDVI, Albedo, and temperature. Source: [Mackey, Lee, and Smith. 2012](https://www.sciencedirect.com/science/article/pii/S0360132311002472?casa_token=3n6eCEdZWxYAAAAA:MA4UqEFlbIlCT00b-1rGqPCTvnLilb6DrcJHeP7kGQpkcnE0AdG6hCPW6chbBK3c9IJZ5VRX_w)"}
+knitr::include_graphics('week8_data/a3.png') 
+```
+
 ## Reflection

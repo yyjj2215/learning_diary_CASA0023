@@ -78,7 +78,7 @@ Earth's atmosphere has water vapor and ozone and other gases, and they will have
 **Necessary and unnecessary atmospheric correction :**
 
 | Unnecessary                                                 | Necessary                                                               |
-|---------------------------------|---------------------------------------|
+|-------------------------------------------------------------|-------------------------------------------------------------------------|
 | Classification of a single image                            | Biophysical parameters needed (e.g. temperature, leaf area index, NDVI) |
 | Independent classification of multi date imagery            | Using spectral signatures through time and space                        |
 | Composite images (combining images)                         |                                                                         |

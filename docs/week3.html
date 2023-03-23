@@ -184,11 +184,6 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Summary</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
   </div>
 </li>
@@ -273,30 +268,34 @@ div.csl-indent {
 </tr>
 </tbody>
 </table>
-<div class="cell" data-layout-align="left">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><img src="week3_data/whiskbroom.gif" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="week3_data/whiskbroom.gif" class="img-fluid figure-img" style="width:100.0%"></p>
 <p></p><figcaption class="figure-caption">Whishbroom. Source: <a href="https://en.wikipedia.org/wiki/Whisk_broom_scanner">wikipedia</a></figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<div class="cell" data-layout-align="left">
+<div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><img src="week3_data/pushbroom.gif" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="week3_data/pushbroom.gif" class="img-fluid figure-img" style="width:100.0%"></p>
 <p></p><figcaption class="figure-caption">Pushbroom. Source: <a href="https://en.wikipedia.org/wiki/Push_broom_scanner">wikipedia</a></figcaption><p></p>
 </figure>
+</div>
+</div>
 </div>
 </div>
 </div>
 </section>
 <section id="why-remote-sensing-data-need-to-be-processed" class="level3" data-number="3.1.2">
 <h3 data-number="3.1.2" class="anchored" data-anchor-id="why-remote-sensing-data-need-to-be-processed"><span class="header-section-number">3.1.2</span> Why remote sensing data need to be processed?</h3>
-<p>This may cause by some noise that are produced by sensors, the atmosphere, the terrain, and so on. For example, the atmosphere causes some noise in collecting data, like atmospheric pollution, floating particles. These noise can be removed by using some correction measures.</p>
+<p>This causes by some noises that are produced by sensors, the atmosphere, the terrain, and so on. For example, the atmosphere causes some noise in collecting data, like atmospheric pollutions, floating particles. These noises can be removed by using some correction measures.</p>
 </section>
 <section id="corrections-of-image-data" class="level3" data-number="3.1.3">
 <h3 data-number="3.1.3" class="anchored" data-anchor-id="corrections-of-image-data"><span class="header-section-number">3.1.3</span> Corrections of image data</h3>
@@ -406,7 +405,7 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p>This is a example of orthorectification, and the left picture shows crooked road, but the right picture shows the real straight road after orthorectification.</p>
+<p>This is an example of orthorectification, and the left picture shows crooked road, but the right picture shows the real straight road after orthorectification.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -420,7 +419,7 @@ div.csl-indent {
 </section>
 <section id="radiometric-calibration" class="level4" data-number="3.1.3.4">
 <h4 data-number="3.1.3.4" class="anchored" data-anchor-id="radiometric-calibration"><span class="header-section-number">3.1.3.4</span> Radiometric Calibration</h4>
-<p>Although many imagery data has already been converted to radiance by data provider, the process of radiometric calibration should be noticed. It refers to conversion of digital number(DN) to spectral radiance. DN is values in every pixels, and they are observed and measured by sensors. The spectral radiance is the amount of energy per unit area, like the amount of light from sensor in the field of view. There are many factors that affects radiance. For example, the intensity of illumination, the direction of illumination, orientation, position of target feature, and so on.</p>
+<p>Although many imagery data has already been converted to radiance by data provider, the process of radiometric calibration should be noticed. It refers to conversion of digital number(DN) to spectral radiance. DN is value in every pixel, and they are observed and measured by sensors. The spectral radiance is the amount of energy per unit area, like the amount of light from sensor in the field of view. There are many factors that affect radiance. For example, the intensity of illumination, the direction of illumination, orientation, position of target feature, and so on.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -485,7 +484,7 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p>The RMSE values are various in different bands, and they should be always noticed. For example, method B has lower RMSE in red-edge and NIR, but higher in green band. So we need to select the suitable method for radiometric calibration depending on our objectives <span class="citation" data-cites="poncet2019a">Poncet et al. (<a href="references.html#ref-poncet2019a" role="doc-biblioref">2019b</a>)</span>. The analysis of imagery data can be more careful because the radiometric calibration method may have influence on the interpretation of UAS imagery.</p>
+<p>The errors provide more understanding of methods. In this case, the RMSE values are various in different bands, and they should be always noticed. For example, method B has lower RMSE in red-edge and NIR, but higher in green band. So we need to select the suitable method for radiometric calibration depending on our objectives <span class="citation" data-cites="poncet2019a">Poncet et al. (<a href="references.html#ref-poncet2019a" role="doc-biblioref">2019b</a>)</span>. Therefore, the analysis of imagery data can be more careful because the radiometric calibration method may have influence on the interpretation of UAS imagery.</p>
 <p><strong>Effects of Atmospheric Corrections on NDVI</strong></p>
 <p>Vegetation measurement is an essential application in remote sensing, and NDVI is Normalized Difference Vegetation Index (NDVI), which can quantify vegetation health. For example, when NDVI values are close to +1, the vegetation should be dense green, and when NDVI values are close to 0, there are no green. The NDVI formula is following:</p>
 <div class="cell" data-layout-align="center">
@@ -508,7 +507,7 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p>One study explored common methods (QUAC, FLAASH, DOS, ACOLITE, 6S, and Sen2Cor) for atmospheric Corrections on NDVI by using Landsat 8, Sentinel-2, and UAV sensors data. In real raster data analysis, data probably are from different source, so the atmospheric correction, to some extent, make them more comparable. In this paper, FLAASH method has the best distinctiveness on NDVI between Landsat 8 and Sentinel-2. <span class="citation" data-cites="moravec2021">Moravec et al. (<a href="references.html#ref-moravec2021" role="doc-biblioref">2021</a>)</span>.</p>
+<p>One study explored common methods (QUAC, FLAASH, DOS, ACOLITE, 6S, and Sen2Cor) for atmospheric Corrections on NDVI by using Landsat 8, Sentinel-2, and UAV sensors data. In real raster data analysis, data probably are from different source, so the atmospheric correction, to some extent, make them more comparable. In this paper, FLAASH method has the best distinctiveness on NDVI between Landsat 8 and Sentinel-2 <span class="citation" data-cites="moravec2021">Moravec et al. (<a href="references.html#ref-moravec2021" role="doc-biblioref">2021</a>)</span>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -546,9 +545,9 @@ div.csl-indent {
 </div>
 <p>In the enhancement image, I can more easily distinguish the boundary of grass and forest, so enhancement is really useful for real analysis in my study.</p>
 <p><strong>Mosaicking</strong></p>
-<p>This is similar to the merge function in QGIS, and merge is essential function. If my study area is not fully recorded by one raster data, I have to mosaic several raster data together in order to get my study area.</p>
+<p>This is similar to the merge function in QGIS, and merge is essential function. If my study area is not fully recorded by one raster image, I have to mosaic several raster image together in order to get my study area.</p>
 <p><strong>Principal Component Analysis</strong></p>
-<p>I think PCA would be a powerful tool in the future study. This contributes to reduce the dimensionality of data. In real remote sensing data analysis, I think the data probably have multiple dimensions, and the PCA would be functional to reduce them, which help us identify which components are more important among the data. For example, I can use PCA in exploring vegetation patterns, which tries to find what vegetation type dominate in study area.</p>
+<p>I think PCA would be a powerful tool in the future study. This contributes to reduce the dimensionality of data. In real remote sensing data analysis, I think the data probably have multiple dimensions, and the PCA would be functional to reduce them, which help us identify which components are more important among the data. For example, I can use PCA in exploring vegetation patterns, which tries to find what vegetation types dominate in study area.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">

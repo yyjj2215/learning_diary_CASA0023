@@ -56,7 +56,7 @@ When the max depth of tree is high (red line in previous figure), the tree learn
 
 -   limit how trees grow (eg. a minimum number of pixels in a leaf, 20 is often used)
 
--   Weakest link pruning (with tree score)
+-   weakest link pruning (with tree score)
 
     Tree score = SSR (The sum of squared residuals)+ tree penalty (alpha) \* T (number of leaves)
 
@@ -148,7 +148,7 @@ knitr::include_graphics('week6_data/final_output.png')
 
 ## Application
 
-Classification in GEE is one of the common application. When we are doing some of classification problems, what types of data and what methods for classification we are using are essential because it can directly affect the accuracy of our final output. This application part tries to review some studies that provide some information about data selection and method selection when doing classification tasks.
+Classification in GEE is one of the common application. When we are doing some of classification problems, what types of data and what methods for classification are essential because it can directly affect the accuracy of our final output. This application part tries to review some studies that provide some information about data selection and method selection when doing classification tasks.
 
 ### Case1: **Land Cover Classification using Google Earth Engine and Random Forest Classifier---The Role of Image Composition**
 
@@ -187,7 +187,7 @@ This paper explore three machine learning algorithms including Random Forest (RF
 **Data**
 
 | Year | Total number of images used in Landsat-8 | Total number of images used in Sentinel-2 |
-|:------------:|:---------------------------:|:---------------------------:|
+|:---------------:|:--------------------------:|:--------------------------:|
 | 2016 |                    10                    |                    23                     |
 | 2018 |                    15                    |                    44                     |
 | 2020 |                    14                    |                    36                     |
@@ -220,9 +220,9 @@ In the above table, all overall accuracy is relatively high in classification, s
 
 ## Reflection
 
-Hyperparameter-tuning is really useful in training a classifier because I have used this concept in training a regression model. It provides me a better R2 in my housing prediction case. Although the content and purpose are different, the method is similar. Both of them are tries to find the best parameter to build the model. For example, finding how many trees in RF can be the best classifier.
+Hyperparameter-tuning is really useful in training a classifier because I have used this concept in training a regression model. It provides me a better R2 in my housing prediction case. Although the content and purpose are different, the method is similar. Both of them are used to find the best parameter to build the model. For example, finding how many trees in RF can be the best classifier.
 
-In the practical, my training accuracy and validation accuracy is so high, and it has overfitting problems. I think there are two reasons, the number of classes is small. Only three classes in my study area, and many area are misclassified into these three classes, in particular, forest and urban. The other reason probably is because I don't pick various training data. Some of my training data I draw only have the short distance among them, this may cause they has the higher similarity or spatial autocorrelation. Therefore, I think I need to learn more methods that can help me avoid overfitting problems and selecting better training data.
+In the practical, my training accuracy and validation accuracy is very high, and I guess it has overfitting problems. I think there are two reasons, the number of classes is small. Only three classes in my study area, and many area are misclassified into these three classes, in particular, forest and urban. The other reason probably is because I don't pick various training data. Some of my training data I draw only have the short distance among them, this may cause they has the higher similarity or spatial autocorrelation. Therefore, I think I need to learn more methods that can help me avoid overfitting problems and selecting better training data.
 
 The evaluation methods of classification was not mentioned in this week content, and this is also one of important component in the machine learning. In the application, two papers mentions user's accuracy, producers' accuracy, overall accuracy, and Kappa coefficient. These evaluation metrics that I need to explore in the following weeks.
 

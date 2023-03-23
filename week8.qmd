@@ -8,7 +8,7 @@
 knitr::include_graphics('week8_data/mind.png') 
 ```
 
-The mind map shows basic structure for this week lecture, and the key point is recognizing the gap among global, local, metropolitan, and involving data analysis. The detailed and data-driven interventions will be the great measures to fill the current policy gap in many urban problems, like urban heat island, pollution and so on.
+The mind map shows basic structure for this week lecture, and the key point is recognizing the gap among global, local, metropolitan, and involving data analysis. The detailed and data-driven interventions will be great measures to fill the current policy gap in many urban problems, like urban heat island, pollution and so on.
 
 ### Temperature Problem Definition
 
@@ -16,7 +16,7 @@ The mind map shows basic structure for this week lecture, and the key point is r
 
 **What is UHI?**
 
-The urban heat island refers to the city center has higher temperature than the suburb and rural area.
+The urban heat island refers to the city center having a higher temperature than the suburb and rural areas.
 
 ```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Urban heat island. Source: [Saurab 2017](https://eco-intelligent.com/2017/04/13/the-urban-heat-island-effect/)"}
 knitr::include_graphics('week8_data/urban.jpg') 
@@ -24,7 +24,7 @@ knitr::include_graphics('week8_data/urban.jpg')
 
 **Why UHI happens?**
 
-Many factors causes UHI, like reduced natural landscape,urban construction materials, heat from human activities, and others.
+Many factors causes UHI, like reduced natural landscape, urban construction materials, heat from human activities, and others.
 
 |    UHI factors     |      Why they increase temperature       |
 |:------------------:|:----------------------------------------:|
@@ -44,11 +44,11 @@ UHI has many negative effects on our society.
 
 ### Policy solutions
 
-Policy can provide cities a good direction that help them to mitigate UHI effects, and the policy solutions basically can be described at the following three levels. However, all of this policies solutions have limitations. They doesn't consider the feasibility and the specific implementations for cities.
+Policy can provide a good direction for cities that help them to mitigate UHI effects, and the policy solutions basically can be described in the following three levels. However, all of these policies solutions have limitations. They doesn't consider the feasibility and the specific implementations for cities.
 
 #### Global
 
-Some global policies are related to the mitigation of UHI, but there don't have specific guidance for implementation of cities, and they are just big goals and targets.
+Some global policies are related to the mitigation of UHI, but they don't have specific guidance for implementation of cities, and they are just big goals and targets.
 
 *New Urban Agenda*
 
@@ -64,7 +64,7 @@ Some global policies are related to the mitigation of UHI, but there don't have 
 
 *Beat the heat handbook*
 
-This hand book from United Nations is the first major document that has specific integration into policy. Although it has some specific interventions in the local level, the handbook is so much information for local planners and managers. Also, interventions don't contain specific procedures and steps for city managers, and solutions to reduce the urban temperature.
+This hand book from United Nations is the first major document that has specific integration into policy. Although it has some specific interventions in the local level, the handbook is too much information for local planners and managers. Also, interventions don't contain specific procedures and steps for city managers, and solutions to reduce the urban temperature.
 
 ```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Source: [Beating the Heat: A Sustainable Cooling Handbook for Cities](https://www.unep.org/resources/report/beating-heat-sustainable-cooling-handbook-cities)"}
 knitr::include_graphics('week8_data/local.png') 
@@ -118,7 +118,7 @@ knitr::include_graphics('week8_data/greenfactor.png')
 
 *Fremantle's Urban Forest Plan*
 
-This plan go through more details because it uses data to analyze where to increase the green spaces. In terms of limitation, it only include one month data, which may biased. Also, the analysing scale (the block) they used are too big. For example, the temperature in block may be various, but in this case the temperature is same in each block.
+This plan go through more details because it uses data to analyze where to increase the green spaces. In terms of limitation, it only include one month data, which may be biased. Also, the analysing scale (the block) they used are too big. For example, the temperature in block may be various, but in this case the temperature is same in each block.
 
 ```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Source: [City of Fremantle](https://www.fremantle.wa.gov.au/council/key-council-strategies/urban-forest-plan)"}
 knitr::include_graphics('week8_data/uf.png') 
@@ -164,7 +164,7 @@ knitr::include_graphics('week8_data/ee-chart.png')
 
 ## Application
 
-Urban heat island (UHI) is popular research topic in recent years. Some of content about UHI is covered in this week course and practical, but they are not enough. There are many other methods and ways that contribute to the better understanding of UHI, the estimation of UHI and mitigation of UHI effects. This application part tries to explore more about them.
+Urban heat island (UHI) is popular research topic in recent years. Some of content about UHI is covered in this week lecture and practical, but they are not enough. There are many other methods and ways that contribute to the better understanding of UHI, the estimation of UHI and mitigation of UHI effects. This application part tries to explore more about them.
 
 ### Case1: The effects of 3D urban morphology on the UHI
 
@@ -190,9 +190,9 @@ knitr::include_graphics('week8_data/a3.png')
 
 ## Reflection
 
-Urban heat island is a long-term problem and research question, and many policy solutions for the mitigation of UHI are good. But I think they can be more specific and detailed from urban forest perspective. As a previous urban forest student, their plans should include detailed implementations about tree species, tree planting, and tree management because many plans just mention we can plant trees in the planning locations, but they don't mention how to plant a tree successfully, how to choose suitable tree species, and how to maintain trees after planting. For example, different trees will have different crown shapes and sizes, and this will affect the mitigation of temperature in the summer. Therefore, although many metropolitan plans are good, I think there still needs to be some improvement in the future.
+Urban heat island is a long-term problem and research question, and many policy solutions for the mitigation of UHI are good. But I think they can be more specific and detailed from urban forest perspective. As a previous urban forest student, their plans should include detailed implementations about tree species, tree planting, and tree management because many plans just mention we can plant trees in the planning locations, but they don't mention how to plant a tree successfully, how to choose suitable tree species, and how to maintain trees after planting. For example, different trees will have different crown shapes and sizes, and this will affect the mitigation of temperature in the summer. Therefore, although many metropolitan plans are good, I think there are still some improvement in the future.
 
-I like the idea of Seattle's policy because it can engage all the residents to contribute to implementation work. When I recall the urban forest interventions I completed in my undergraduate, the most difficult problem was a lack of financial support and money. So in the implementation of these plans, we can make our plans more attractive for residents. This will be really helpful for the city to implement their plans and save money.
+I like the idea of Seattle's policy because it can engage all the residents contributing to implementation work. When I recall the urban forest interventions I completed in my undergraduate, the most difficult problem was lack of financial support and money. So in the implementation of these plans, we can make our plans more attractive for residents. This will be really helpful for the city to implement their plans and save money.
 
 In the practical, I generated the temperature shapefile for Tianjin based on Landsat and MODIS, and this would be a really useful process for my future study. Temperature is a essentail variable in many research topics, and I think I'm able to make temperature data on any case locations and time series after this practical. Also, I will use R to do percentile rank for my temperature data becasue it is more easier than it in GEE.
 

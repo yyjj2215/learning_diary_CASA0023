@@ -15,8 +15,8 @@ knitr::include_graphics('me.jpg')
 :::
 
 ## About this book
-This book was written in Spring 2023 at UCL master, and it was part of my assessment for CASA0023 (Remote Sensing Cities and Environments). It was edited by using Quarto Book, and all codes were opensource on my Github. The contents cover remote sensing principles, applications, and its analysis in R and Google Earth Engine. If you are interested in remote sensing or spatial data analysis, I think this book would be helpful.
+This book was written in Spring 2023 at UCL, and it was part of my assessment for CASA0023 (Remote Sensing Cities and Environments). It was edited by using Quarto Book, and all codes are opensource on my Github. The contents cover remote sensing principles, applications, and its analysis in R and Google Earth Engine. If you are interested in remote sensing or spatial data analysis, I think this book would be helpful.
 
 ## Ackownledgement
 
-I would like to thank Dr. Andrew MacLachlan for helping with this book.
+I would like to thank Dr. Andrew MacLachlan and Tutor Wenlan Zhang for helping with this book. This is the best course I have taken at UCL.

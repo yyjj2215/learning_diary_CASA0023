@@ -184,11 +184,6 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Summary</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
   </div>
 </li>
@@ -258,7 +253,7 @@ div.csl-indent {
 <h3 data-number="7.1.2" class="anchored" data-anchor-id="classification-approaches"><span class="header-section-number">7.1.2</span> Classification Approaches</h3>
 <section id="object-based-image-analysis" class="level4" data-number="7.1.2.1">
 <h4 data-number="7.1.2.1" class="anchored" data-anchor-id="object-based-image-analysis"><span class="header-section-number">7.1.2.1</span> Object based image analysis</h4>
-<p>In classification, a pixel can’t represent an object, and an object normally is made up of many pixels. There are many methods in object based image analysis. Superpixels consider the similarity of pixels and homogeneity of the pixels, and Simple Linear Iterative Clustering (SLIC) is one of most common method to generate superpixels. For example, the centroid of objects moves iteratively, and the images become more object-based images.</p>
+<p>In classification, a pixel can’t represent an object, and an object normally is made up of many pixels. There are many methods in object-based image analysis. Superpixels consider the similarity of pixels and homogeneity of the pixels, and Simple Linear Iterative Clustering (SLIC) is one of most common method to generate superpixels. For example, the centroid of objects moves iteratively, and the images become more object-based images.</p>
 <div class="cell" data-layout-align="left">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-left">
@@ -374,7 +369,7 @@ div.csl-indent {
 <p><strong>Kappa</strong></p>
 <p>express the accuracy of an image compared to the results by chance. However, it has two limitations, one is hard to define a good value, and the other is Kappa values have different levels of accuracy.</p>
 <p><strong>F1 score</strong></p>
-<p>combines producer accuracy and user accuracy, range from 0 to 1, and 1 is the best performance. It also has two limitations, it doesn’t consider the true negative, and it considers user accuracy and producer are equally important.</p>
+<p>combines producer accuracy and user accuracy, range from 0 to 1, and 1 is the best performance. It also has two limitations, it doesn’t consider the true negative, and it considers user accuracy and producer accuracy are equally important.</p>
 <div class="cell" data-layout-align="left">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-left">
@@ -413,7 +408,7 @@ div.csl-indent {
 </div>
 </div>
 <p><strong>Spatial cross validation</strong></p>
-<p>is the cross validation that consider spatial dependence. Spatial autocorrelation are happens between training and testing data. Spatial cross validation spatially partitioning the folded data, and stops training and testing data being near each other. For example, if there are two seprate forest in the image, and the training data are from the first forest, and the testing data are from second forest.</p>
+<p>is the cross validation that consider spatial dependence. Spatial autocorrelation happens between training and testing data. Spatial cross validation spatially partitioning the folded data, and stops training and testing data being near each other. For example, if there are two seprate forest in the image, and the training data are from the first forest, and the testing data are from second forest.</p>
 <div class="cell" data-layout-align="left">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-left">
@@ -575,7 +570,7 @@ div.csl-indent {
 <p>Cross-validation is a common and important technique that can help me to evaluate my model, avoid overfitting, and optimize hyperparameters in my model training work. Similarly, spatial cross-validation has not only previous benefits but also considers spatial autocorrelation. In this method, it makes the training and testing datasets are spatially independent. This will improve the accuracy of the spatial prediection model. Therefore, I think spatial cross validation will be a useful tool in evaluation of my future spatial prediction model.</p>
 <p>This week’s summary covered many accuracy assessment methods, but I think the most useful one is confusion matrix in the classification. In the matrix, I can directly see the performance of my model in each category. For example, I can find that my model probably classified some vegetation as forest because they are similar or my model classified all water correctly. This will provide some ideas about where my model did well or not. I can adjust my model based on the confusion matrix. In addition, I can consider to improve my UA, PA or OA depending on various purposes. For example, if I do some analysis about the glacier, I probably don’t care about the accuracy of vegetation in my model.</p>
 <p>Like the first case study in the application, it compares the performance of pixed-based and object-based approaches, and they found object-based approach has higher accuracy. In my future work, I think I also need to explore different approaches, like object-based and subpixel. This will give me more information about how to justify them, and select the suitable approach. The second case shows the accuracy assessment methods are varied in many papers. Although some of the studys still use Kappa, I think Kappa is not the best accuracy assessment compared to OA, UA, and PA in the classification problems. In my opinion, confusion matrix is the first evaluation method when I do classification in machine learning.</p>
-<p>In the practical, the subpixel analysis requires endmembers to compute the percent of each pixel, and I used mean of selected ROI as the values of endmembers. In this process, I only select one big polygon for each category, and this may reduce the accuracy of my classification. Also, In my classification, I divide urban into two categories: high-urban and low-urban, I found that low-urban is so diverse, and it’s hard to find the best sample of low urban on the map. I think I need to explore more about how to better classify low-urban and high-urban. One of my idea about this probably is that I can combine some GIS data with helping me distinguish them. In addition, the superpixel uses SNIC algorithms based on color and spatial proximity, which is very interesting to me. I found this algorithm also can be applied to scene analysis, which may be useful for my dissertation topic. My dissertation is to analyze the urban green space using deep learning based on street view imagery.</p>
+<p>In the practical, the subpixel analysis requires endmembers to compute the percent of each pixel, and I used mean of selected ROI as the values of endmembers. In this process, I only select one big polygon for each category, and this may reduce the accuracy of my classification. Also, In my classification, I divide urban into two categories: high-urban and low-urban, I found that low-urban is so diverse, and it’s hard to find the best sample of low urban on the map. I think I need to explore more about how to better classify low-urban and high-urban. One of my idea about this probably is that I can combine some GIS data to help me distinguish them. In addition, the superpixel uses SNIC algorithms based on color and spatial proximity, which is very interesting to me. I found this algorithm also can be applied to scene analysis, which may be useful for my dissertation topic. My dissertation is to analyze the urban green space using deep learning based on street view imagery.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">

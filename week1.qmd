@@ -12,7 +12,7 @@ knitr::include_graphics('week1_data/passive_and_active.png')
 
 ### Electromagentic waves
 
-propagate through space and carry momentum and electromagnetic radiant energy.
+propagate through space and carry momentum and electromagnetic radiant energy. The larger wavelengths with lower frequency, and the smaller wavelengths with higher frequency, we can the characteristics of wavelengths to detect things.
 
 ```{r echo=FALSE, out.width = "100%", fig.align='center', cache=FALSE, fig.cap= "Electromagentice waves. Source: [Encyclopaedia Britannica](https://www.britannica.com/science/electromagnetic-spectrum)"}
 knitr::include_graphics('week1_data/waves.png') 
@@ -65,7 +65,9 @@ The data is provided by the Copernicus Space Component Data Access (CSCDA), whic
 
 Data download link: <https://scihub.copernicus.eu/dhus/#/home>
 
-**Landsat data** All Landsat data are provided by the U.S. Geological Survey, and it's also free. It has the longest free temporal data, which is useful for doing raster data analysis in temporal aspects.
+**Landsat data**
+
+All Landsat data are provided by the U.S. Geological Survey, and it's also free. It has the longest free temporal data, which is useful for doing raster data analysis in temporal aspects.
 
 Data download link: <https://earthexplorer.usgs.gov/>
 
@@ -81,7 +83,7 @@ knitr::include_graphics('week1_data/week1_snap.png')
 
 Color composites are an essential concept in remote sensing. True color composites sometimes refer to the color we recognize in life. For example, the tree canopy is green, and the strawberry is red. The false color composites are to display the real color in other colors. For example, the tree canopy can be displayed as red, and the strawberry can be displayed as green. The false color composites are widely applied in many remote sensing researches.
 
-One research was conducted in Afghanistan by U.S. Agency for International Development and the U.S. Trade and Development Agency, and it assessed the natural resources of Afghanistan. The following picture is a true color composite. It's difficult to recognize some of the characteristics in this area., but the False color composite better displays individual strata, allows regional correlations of strata, and better depicts structure, such as anticlines, synclines, and faults(@philipa.2007).
+One research was conducted in Afghanistan by U.S. Agency for International Development and the U.S. Trade and Development Agency, and it assessed the natural resources of Afghanistan. The following picture is a true color composite. It's difficult to recognize some of the characteristics in this area, but the False color composite better displays individual strata, allows regional correlations of strata, and better depicts structure, such as anticlines, synclines, and faults(@philipa.2007).
 
 ```{r echo=FALSE, out.width = "100%", fig.align='center', cache=FALSE, fig.cap= "Source: [Davis, P. A. 2007](https://pubs.usgs.gov/of/2007/1029/of2007-1029.pdf)"}
 knitr::include_graphics('week1_data/case1.png') 
@@ -91,7 +93,7 @@ knitr::include_graphics('week1_data/case1.png')
 knitr::include_graphics('week1_data/case2.png') 
 ```
 
-The color gun can produce a variety of false color composites. And the second research compares the different combinations of false colors in Pail/Padhrar Area in Punjab Province, Pakistan (@bajwa2020) The table shows the same geological formation can be displayed in various colors in different false color composites. This would be applied to many remote sensing data if we try to identify some specific features.
+The color gun can produce a variety of false color composites. And the second research compares the different combinations of false colors in Pail/Padhrar Area in Punjab Province, Pakistan (@bajwa2020). The table shows the same geological formation can be displayed in various colors in different false color composites. This can be applied to many remote sensing data if we try to identify some specific features.
 
 ```{r echo=FALSE, out.width = "100%", fig.align='center', cache=FALSE, fig.cap= "Source: [Bajwa et al. 2020](https://link.springer.com/article/10.1007/s12524-019-01090-7/tables/1)"}
 knitr::include_graphics('week1_data/week1_case3.png') 
@@ -101,7 +103,7 @@ knitr::include_graphics('week1_data/week1_case3.png')
 
 **Raster data acquisition**
 
-The two main raster data acquisition ways are useful for future research, and I can find all raster data all over the world from Sentinel and Landsat. This actually inspires me that I can applied raster data in my final work of GEOG0114 course last term. My original topic is to explore how the thermal inequality affect people's health in Chicago, but I don't know where to download raster data and how to manipulate it. Then, I just gave up this topic and selected a new topic, which was doing criminology research. However, I think I'm currently able to analysis raster data in my study by using SNAP, QGIS, and R.
+The two main raster data acquisition ways are useful for future research, and I can find all raster data all over the world from Sentinel and Landsat. This actually inspires me that I can applied raster data in my final work of GEOG0114 course last term. My original topic is to explore how the thermal inequality affect people's health in Chicago, but I don't know where to download raster data and how to manipulate it. Then, I just gave up this topic and selected a new topic, which was doing criminology research. However, I think I'm currently able to analyze raster data in my study by using SNAP, QGIS, and R.
 
 ```{r echo=FALSE, out.width = "80%", fig.align='center', cache=FALSE, fig.cap= "Resample and mask for Sentinel and Landsat data of Cape Town in south Africa Source: Yanbo"}
 knitr::include_graphics('week1_data/r1.png') 
@@ -115,7 +117,7 @@ I think this content will be useful for me to better understand the applications
 knitr::include_graphics('week1_data/r2.jpg') 
 ```
 
-The above figure provides a very good example for explanation. I can easily identify different material based on their characteristics of reflectance. For example, when the wavelengths greater than 700nm, the reflectance of green vegetation increases from 10% to 50%, this is also called red edge. This is really essential for identify green vegetation in real application and distinguish different vegetation type because the amount of Chlorophyll are various in different species. In addition, I also can use spectral signature to identify different type of materials, like explore where is the urban area, agriculture, bare land, and so on.
+The above figure provides a very good example for explanation. I can easily identify different materials based on their characteristics of reflectance. For example, when the wavelengths greater than 700nm, the reflectance of green vegetation increases from 10% to 50%, this is also called red edge. This is really essential for identifying green vegetation in real application and distinguish different vegetation type because the amount of Chlorophyll are various in different vegetation species. In addition, I also can use spectral signature to identify different type of materials, like explore where is the urban area, agriculture, bare land, and so on.
 
 **Color composites**
 

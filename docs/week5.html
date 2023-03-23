@@ -247,11 +247,6 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Summary</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
   </div>
 </li>
@@ -347,7 +342,7 @@ div.csl-indent {
 </tbody>
 </table>
 <p><strong>Javascript</strong></p>
-<p>GEE use javascript (web programming language) to manipulate data.</p>
+<p>using javascript (web programming language) to manipulate data in GEE.</p>
 <ul>
 <li><p>var define objects</p></li>
 <li><p>// add comments</p></li>
@@ -460,14 +455,14 @@ div.csl-indent {
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">filterBounds</span>(Dheli)<span class="op">;</span>  <span class="co">// Intersecting ROI</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(oneimage<span class="op">,</span> {<span class="dt">bands</span><span class="op">:</span> [<span class="st">"SR_B4"</span><span class="op">,</span> <span class="st">"SR_B3"</span><span class="op">,</span> <span class="st">"SR_B2"</span>]})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Load feature collection</strong></p>
-<p>features refers to the geometries with attributes, use <code>ee.FeatureCollection()</code> to load, <code>filter()</code> to select specific area, like R</p>
+<p>features refers to the geometries with attributes, use <code>ee.FeatureCollection()</code> to load, <code>filter()</code> to select specific area, like R.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> india <span class="op">=</span> ee<span class="op">.</span><span class="fu">FeatureCollection</span>(<span class="st">'users/jesse/china'</span>)<span class="op">;</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(china<span class="op">,</span> <span class="st">"china"</span>)<span class="op">;</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(china<span class="op">,</span> {}<span class="op">,</span> <span class="st">"china"</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="sourceCode" id="cb6"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> india <span class="op">=</span> ee<span class="op">.</span><span class="fu">FeatureCollection</span>(<span class="st">'users/jesse/china'</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">filter</span>(<span class="st">'GID_1 == "CHN.25_1"'</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Reducing images</strong></p>
-<p>When I only want to classify one image from a massive image collections, use this method. The process of this is to take all median of all images to make a image composite, then summarized into one single image. This process ignored some extreme values, but they may be useful.</p>
+<p>When I only want to classify one image from a massive image collection, use this method. The process of this method is to take all median of all images to make a image composite, then summarize into one single image. This process ignores some extreme values, but they may be useful.</p>
 <p><code>collection.reduce()</code> client side</p>
 <p><code>ee.Reducer()</code> server side</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Compute the median in each band, each pixel.</span></span>
@@ -518,7 +513,7 @@ div.csl-indent {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><img src="week5_data/Dheli.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="week5_data/Dheli.png" class="img-fluid figure-img" style="width:70.0%"></p>
 <p></p><figcaption class="figure-caption">Clip output. Source: Yanbo</figcaption><p></p>
 </figure>
 </div>
@@ -543,7 +538,7 @@ div.csl-indent {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><img src="week5_data/glcm.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="week5_data/glcm.png" class="img-fluid figure-img" style="width:70.0%"></p>
 <p></p><figcaption class="figure-caption">Texture measures output. Source: Yanbo</figcaption><p></p>
 </figure>
 </div>

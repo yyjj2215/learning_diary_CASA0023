@@ -17,17 +17,19 @@ The remote sensing data are collected by multispectral scanners, and they can de
 | Pixel distortion      | No pixel distortion    |
 | Example: Landsat 7    | Example: Landsat 8     |
 
-```{r echo=FALSE, out.width = "50%", fig.align='left', cache=FALSE, fig.cap= "Whishbroom. Source: [wikipedia](https://en.wikipedia.org/wiki/Whisk_broom_scanner)"}
+::: {layout-ncol="2"}
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Whishbroom. Source: [wikipedia](https://en.wikipedia.org/wiki/Whisk_broom_scanner)"}
 knitr::include_graphics('week3_data/whiskbroom.gif') 
 ```
 
-```{r echo=FALSE, out.width = "50%", fig.align='left', cache=FALSE, fig.cap= "Pushbroom. Source: [wikipedia](https://en.wikipedia.org/wiki/Push_broom_scanner)"}
+```{r echo=FALSE, out.width = "100%", fig.align='left', cache=FALSE, fig.cap= "Pushbroom. Source: [wikipedia](https://en.wikipedia.org/wiki/Push_broom_scanner)"}
 knitr::include_graphics('week3_data/pushbroom.gif') 
 ```
+:::
 
 ### Why remote sensing data need to be processed?
 
-This may cause by some noise that are produced by sensors, the atmosphere, the terrain, and so on. For example, the atmosphere causes some noise in collecting data, like atmospheric pollution, floating particles. These noise can be removed by using some correction measures.
+This causes by some noises that are produced by sensors, the atmosphere, the terrain, and so on. For example, the atmosphere causes some noise in collecting data, like atmospheric pollutions, floating particles. These noises can be removed by using some correction measures.
 
 ### Corrections of image data
 
@@ -76,7 +78,7 @@ Earth's atmosphere has water vapor and ozone and other gases, and they will have
 **Necessary and unnecessary atmospheric correction :**
 
 | Unnecessary                                                 | Necessary                                                               |
-|-------------------------------------------------------------|-------------------------------------------------------------------------|
+|---------------------------------|---------------------------------------|
 | Classification of a single image                            | Biophysical parameters needed (e.g. temperature, leaf area index, NDVI) |
 | Independent classification of multi date imagery            | Using spectral signatures through time and space                        |
 | Composite images (combining images)                         |                                                                         |
@@ -104,7 +106,7 @@ The topography of earth has variation, like hills, ridges, canyon and so on. Als
 knitr::include_graphics('week3_data/oc1.png') 
 ```
 
-This is a example of orthorectification, and the left picture shows crooked road, but the right picture shows the real straight road after orthorectification.
+This is an example of orthorectification, and the left picture shows crooked road, but the right picture shows the real straight road after orthorectification.
 
 ```{r echo=FALSE, out.width = "100%", fig.align='center', cache=FALSE, fig.cap= "Example of before orthorectification and after Source: [OSSIM](https://trac.osgeo.org/ossim/wiki/orthorectification)"}
 knitr::include_graphics('week3_data/oc3.png') 
@@ -112,7 +114,7 @@ knitr::include_graphics('week3_data/oc3.png')
 
 #### Radiometric Calibration
 
-Although many imagery data has already been converted to radiance by data provider, the process of radiometric calibration should be noticed. It refers to conversion of digital number(DN) to spectral radiance. DN is values in every pixels, and they are observed and measured by sensors. The spectral radiance is the amount of energy per unit area, like the amount of light from sensor in the field of view. There are many factors that affects radiance. For example, the intensity of illumination, the direction of illumination, orientation, position of target feature, and so on.
+Although many imagery data has already been converted to radiance by data provider, the process of radiometric calibration should be noticed. It refers to conversion of digital number(DN) to spectral radiance. DN is value in every pixel, and they are observed and measured by sensors. The spectral radiance is the amount of energy per unit area, like the amount of light from sensor in the field of view. There are many factors that affect radiance. For example, the intensity of illumination, the direction of illumination, orientation, position of target feature, and so on.
 
 ```{r echo=FALSE, out.width = "100%", fig.align='center', cache=FALSE, fig.cap= "Factors that affect radiance Source: [Susan 2020](https://www.materials-talks.com/the-importance-of-calibrating-your-remote-sensing-imagery/)"}
 knitr::include_graphics('week3_data/rc1.png') 
@@ -150,7 +152,7 @@ knitr::include_graphics('week3_data/a1.png')
 knitr::include_graphics('week3_data/a2.png') 
 ```
 
-The RMSE values are various in different bands, and they should be always noticed. For example, method B has lower RMSE in red-edge and NIR, but higher in green band. So we need to select the suitable method for radiometric calibration depending on our objectives @poncet2019a. The analysis of imagery data can be more careful because the radiometric calibration method may have influence on the interpretation of UAS imagery.
+The errors provide more understanding of methods. In this case, the RMSE values are various in different bands, and they should be always noticed. For example, method B has lower RMSE in red-edge and NIR, but higher in green band. So we need to select the suitable method for radiometric calibration depending on our objectives @poncet2019a. Therefore, the analysis of imagery data can be more careful because the radiometric calibration method may have influence on the interpretation of UAS imagery.
 
 **Effects of Atmospheric Corrections on NDVI**
 
@@ -164,7 +166,7 @@ knitr::include_graphics('week3_data/a4.png')
 knitr::include_graphics('week3_data/a3.jpg') 
 ```
 
-One study explored common methods (QUAC, FLAASH, DOS, ACOLITE, 6S, and Sen2Cor) for atmospheric Corrections on NDVI by using Landsat 8, Sentinel-2, and UAV sensors data. In real raster data analysis, data probably are from different source, so the atmospheric correction, to some extent, make them more comparable. In this paper, FLAASH method has the best distinctiveness on NDVI between Landsat 8 and Sentinel-2. @moravec2021.
+One study explored common methods (QUAC, FLAASH, DOS, ACOLITE, 6S, and Sen2Cor) for atmospheric Corrections on NDVI by using Landsat 8, Sentinel-2, and UAV sensors data. In real raster data analysis, data probably are from different source, so the atmospheric correction, to some extent, make them more comparable. In this paper, FLAASH method has the best distinctiveness on NDVI between Landsat 8 and Sentinel-2 @moravec2021.
 
 ```{r echo=FALSE, out.width = "70%", fig.align='center', cache=FALSE, fig.cap= "Median values of non-corrected TOA and corrected BOA Source: [David 2021](https://www.mdpi.com/2072-4292/13/18/3550)"}
 knitr::include_graphics('week3_data/a5.png') 
@@ -188,8 +190,8 @@ In the enhancement image, I can more easily distinguish the boundary of grass an
 
 **Mosaicking**
 
-This is similar to the merge function in QGIS, and merge is essential function. If my study area is not fully recorded by one raster data, I have to mosaic several raster data together in order to get my study area.
+This is similar to the merge function in QGIS, and merge is essential function. If my study area is not fully recorded by one raster image, I have to mosaic several raster image together in order to get my study area.
 
 **Principal Component Analysis**
 
-I think PCA would be a powerful tool in the future study. This contributes to reduce the dimensionality of data. In real remote sensing data analysis, I think the data probably have multiple dimensions, and the PCA would be functional to reduce them, which help us identify which components are more important among the data. For example, I can use PCA in exploring vegetation patterns, which tries to find what vegetation type dominate in study area.
+I think PCA would be a powerful tool in the future study. This contributes to reduce the dimensionality of data. In real remote sensing data analysis, I think the data probably have multiple dimensions, and the PCA would be functional to reduce them, which help us identify which components are more important among the data. For example, I can use PCA in exploring vegetation patterns, which tries to find what vegetation types dominate in study area.

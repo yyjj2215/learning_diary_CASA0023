@@ -26,7 +26,7 @@ knitr::include_graphics('week5_data/summary.png')
 
 **Javascript**
 
-GEE use javascript (web programming language) to manipulate data.
+using javascript (web programming language) to manipulate data in GEE.
 
 -   var define objects
 
@@ -134,7 +134,7 @@ Map.addLayer(oneimage, {bands: ["SR_B4", "SR_B3", "SR_B2"]})
 
 **Load feature collection**
 
-features refers to the geometries with attributes, use `ee.FeatureCollection()` to load, `filter()` to select specific area, like R
+features refers to the geometries with attributes, use `ee.FeatureCollection()` to load, `filter()` to select specific area, like R.
 
 ``` javascript
 var india = ee.FeatureCollection('users/jesse/china');
@@ -149,7 +149,7 @@ var india = ee.FeatureCollection('users/jesse/china')
 
 **Reducing images**
 
-When I only want to classify one image from a massive image collections, use this method. The process of this is to take all median of all images to make a image composite, then summarized into one single image. This process ignored some extreme values, but they may be useful.
+When I only want to classify one image from a massive image collection, use this method. The process of this method is to take all median of all images to make a image composite, then summarize into one single image. This process ignores some extreme values, but they may be useful.
 
 `collection.reduce()` client side
 
@@ -447,7 +447,7 @@ knitr::include_graphics('week5_data/a3.png')
 
 ## Reflection
 
-Most of the analysis for remote sensing data in GEE is easier than those in R. For example, I don't need to download data, and load them in R or SNAP, and I can easily access the data and visualize them in GEE. Also, the texture measure in GEE is just a few codes, but it is complex in R. However, the PCA in GEE is quite more complex than it in R.
+Most of the analysis for remote sensing data in GEE is easier than them in R. For example, I don't need to download data, and load them in R or SNAP, and I can easily access the data and visualize them in GEE. Also, the texture measure in GEE is just a few codes, but it is complex in R. However, the PCA in GEE is quite more complex than it in R.
 
 In practice this week, I found print() is a really useful function that can help me identify errors in the code, and it also helps me to check the result of every step in the right way. For instance, there is a wrong object used in the code, and when I applied the get_info() function, it showed there is no this band. Finally, I used print() to find where had the wrong object. In addition, the NDVI in band math will be a useful tool for identifying vegetation in the study area. Similarly, LST in the second case study is also a good variable when exploring some topics about temperature.
 
@@ -459,4 +459,4 @@ I think GEE is a form of big data application in the geospatial data area becaus
 knitr::include_graphics('week5_data/r1.png') 
 ```
 
-Like the video about machine learning at the end of the lecture, I think machine learning will be an efficient tool that can help me to handle large image datasets. I can use the datasets to build a machine-learning model, and the model can predict the component or characteristics in the images. Also, the paper I mentioned in week 4 also uses the machine learning method to discover potential planting sites. So I think this can help me to figure out the classification problems in remote sensing.
+Like the video about machine learning at the end of the lecture, I think machine learning will be an efficient tool that can help me to handle large image datasets. I can use the datasets to build a machine-learning model, and the model can predict the components or characteristics in the images. Also, the paper I mentioned in week 4 also uses the machine learning method to discover potential planting sites. So I think this can help me to figure out the classification problems in remote sensing.
